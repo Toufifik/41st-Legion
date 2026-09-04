@@ -846,3 +846,157 @@ footer {
         text-align: center;
     }
 }
+
+/* =====================================================
+   RÈGLEMENT — RECTANGLES
+===================================================== */
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 82%;
+    margin: 40px auto;
+}
+
+.rule {
+    display: flex;
+    width: 100%;
+    min-height: 150px;
+
+    background: linear-gradient(
+        100deg,
+        rgba(8, 25, 15, 0.96),
+        rgba(3, 10, 6, 0.94)
+    );
+
+    border: 1px solid rgba(67, 255, 131, 0.20);
+    border-left: 3px solid #43ff83;
+
+    transition: 0.25s ease;
+}
+
+.rule:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(67, 255, 131, 0.45);
+
+    box-shadow:
+        0 0 25px rgba(67, 255, 131, 0.08);
+}
+
+
+/* NUMÉRO */
+
+.rule-number {
+    width: 90px;
+    min-width: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #43ff83;
+
+    background: rgba(67, 255, 131, 0.04);
+
+    border-right: 1px solid rgba(67, 255, 131, 0.15);
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 22px;
+}
+
+
+/* CONTENU */
+
+.rule-content {
+    flex: 1;
+
+    padding: 25px 30px;
+}
+
+.rule-content h2 {
+    margin: 0 0 8px;
+
+    color: #edf8f0;
+
+    font-family: 'Rajdhani', sans-serif;
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.rule-content p {
+    margin: 0 0 12px;
+
+    max-width: 900px;
+
+    color: #9daaa3;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.rule-content ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px 25px;
+
+    margin: 10px 0 0;
+
+    padding-left: 18px;
+}
+
+.rule-content li {
+    color: #829189;
+
+    font-family: 'Share Tech Mono', monospace;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .rules {
+        width: 100%;
+    }
+
+    .rule {
+        flex-direction: column;
+    }
+
+    .rule-number {
+        width: 100%;
+        min-width: 0;
+
+        height: 50px;
+
+        justify-content: flex-start;
+
+        padding-left: 20px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(67, 255, 131, 0.15);
+    }
+
+    .rule-content {
+        padding: 20px;
+    }
+
+    .rule-content h2 {
+        font-size: 24px;
+    }
+}
