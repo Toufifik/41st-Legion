@@ -1,27 +1,24 @@
-/* =====================================================
-   41ST LÉGION D'ELITE
-   STYLE PRINCIPAL
-   ===================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
 
-
-/* ================= VARIABLES ================= */
+/* =====================================================
+   BASE
+===================================================== */
 
 :root {
     --black: #020503;
     --dark: #07100a;
+    --dark2: #0b170f;
+
     --green: #43ff83;
     --green-dark: #19b957;
-    --line: rgba(67,255,131,.20);
-    --text: #edf8f0;
+
+    --white: #edf8f0;
     --gray: #91a99a;
 
-    --width: 1160px;
+    --line: rgba(67,255,131,.20);
+
+    --width: 1200px;
 }
-
-
-/* ================= BASE ================= */
 
 * {
     box-sizing: border-box;
@@ -34,23 +31,23 @@ html {
 body {
     margin: 0;
 
-    color: var(--text);
-
-    font-family: 'Rajdhani', Arial, sans-serif;
-
     background:
         radial-gradient(
-            circle at top,
-            rgba(30,150,70,.15),
+            circle at 50% 0%,
+            rgba(35,160,75,.18),
             transparent 40%
         ),
-        var(--black);
+        #020503;
+
+    color: var(--white);
+
+    font-family: 'Rajdhani', Arial, sans-serif;
 
     line-height: 1.6;
 }
 
 
-/* Grille en arrière-plan */
+/* Grille */
 
 body::before {
     content: "";
@@ -74,12 +71,18 @@ body::before {
         );
 
     background-size: 45px 45px;
-
-    opacity: .5;
 }
 
 
-/* ================= LIENS ================= */
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.wrap {
+    width: min(var(--width), calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+}
 
 a {
     color: inherit;
@@ -87,25 +90,17 @@ a {
 }
 
 
-/* ================= CONTENEUR ================= */
-
-.wrap {
-    width: min(var(--width), calc(100% - 34px));
-    margin: auto;
-}
-
-
 /* =====================================================
    HEADER
-   ===================================================== */
+===================================================== */
 
 header {
     position: sticky;
     top: 0;
 
-    z-index: 100;
+    z-index: 1000;
 
-    background: rgba(2,5,3,.94);
+    background: rgba(2,5,3,.96);
 
     border-bottom: 1px solid var(--line);
 
@@ -113,7 +108,7 @@ header {
 }
 
 .header {
-    min-height: 95px;
+    min-height: 100px;
 
     display: flex;
 
@@ -121,38 +116,42 @@ header {
 
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 40px;
 }
 
 
-/* ================= LOGO ================= */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .brand {
     display: flex;
 
     align-items: center;
 
-    gap: 15px;
+    gap: 16px;
 
-    font-weight: 700;
-
-    letter-spacing: 2px;
+    flex-shrink: 0;
 }
 
 .brand img {
-    width: 65px;
-    height: 65px;
+    width: 68px;
+    height: 68px;
 
     object-fit: contain;
 
     filter:
-        drop-shadow(0 0 10px rgba(67,255,131,.45));
+        drop-shadow(0 0 10px rgba(67,255,131,.55));
 }
 
 .brand span {
     color: white;
 
-    font-size: 19px;
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
 
     line-height: 1.1;
 }
@@ -172,18 +171,20 @@ header {
 }
 
 
-/* ================= MENU ================= */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 nav {
     display: flex;
 
     align-items: center;
 
-    gap: 5px;
+    justify-content: flex-end;
+
+    gap: 4px;
 
     flex-wrap: wrap;
-
-    justify-content: flex-end;
 }
 
 nav a {
@@ -214,12 +215,12 @@ nav a.active {
 
 /* =====================================================
    HERO
-   ===================================================== */
+===================================================== */
 
 .hero {
     position: relative;
 
-    min-height: 600px;
+    min-height: 620px;
 
     display: flex;
 
@@ -234,9 +235,6 @@ nav a.active {
     border-bottom: 1px solid var(--line);
 }
 
-
-/* Vidéo */
-
 .hero-video {
     position: absolute;
 
@@ -247,11 +245,8 @@ nav a.active {
 
     object-fit: cover;
 
-    opacity: .35;
+    opacity: .45;
 }
-
-
-/* Couche sombre sur la vidéo */
 
 .hero-overlay {
     position: absolute;
@@ -260,24 +255,18 @@ nav a.active {
 
     background:
         linear-gradient(
-            rgba(2,5,3,.65),
-            rgba(2,5,3,.95)
+            rgba(2,5,3,.45),
+            rgba(2,5,3,.80)
         );
 }
-
-
-/* Contenu */
 
 .hero-content {
     position: relative;
 
     z-index: 2;
 
-    width: 90%;
+    width: min(900px, 90%);
 }
-
-
-/* Logo du hero */
 
 .hero-logo {
     width: 150px;
@@ -287,16 +276,9 @@ nav a.active {
 
     margin-bottom: 25px;
 
-    border-radius: 50%;
-
-    border: 1px solid var(--line);
-
-    box-shadow:
-        0 0 45px rgba(67,255,131,.15);
+    filter:
+        drop-shadow(0 0 20px rgba(67,255,131,.55));
 }
-
-
-/* Petit texte */
 
 .kicker {
     color: var(--green);
@@ -310,9 +292,6 @@ nav a.active {
     text-transform: uppercase;
 }
 
-
-/* Gros titre */
-
 .hero h1 {
     margin: 15px 0 5px;
 
@@ -322,19 +301,17 @@ nav a.active {
 
     line-height: 1;
 
-    text-transform: uppercase;
-
     letter-spacing: 4px;
+
+    text-transform: uppercase;
 }
 
 .hero h2 {
     margin: 0 0 20px;
 
-    color: #b9cabe;
+    color: #c5d5ca;
 
-    font-size: 25px;
-
-    font-weight: 500;
+    font-size: 26px;
 }
 
 .hero p {
@@ -342,7 +319,7 @@ nav a.active {
 
     margin: auto;
 
-    color: var(--gray);
+    color: #b1c0b5;
 
     font-size: 18px;
 }
@@ -350,7 +327,7 @@ nav a.active {
 
 /* =====================================================
    BOUTONS
-   ===================================================== */
+===================================================== */
 
 .actions {
     margin-top: 25px;
@@ -359,7 +336,7 @@ nav a.active {
 .btn {
     display: inline-block;
 
-    padding: 11px 20px;
+    padding: 12px 20px;
 
     color: #021007;
 
@@ -370,45 +347,45 @@ nav a.active {
     font-weight: 700;
 
     text-transform: uppercase;
-
-    letter-spacing: 1px;
-}
-
-.btn:hover {
-    background: transparent;
-
-    color: var(--green);
 }
 
 .btn.out {
-    margin-left: 7px;
+    margin-left: 8px;
 
     color: var(--green);
 
     background: transparent;
+}
+
+.btn:hover {
+    color: #021007;
+
+    background: white;
+
+    border-color: white;
 }
 
 
 /* =====================================================
    SECTIONS
-   ===================================================== */
+===================================================== */
 
 main {
     min-height: 60vh;
 }
 
 .section {
-    padding: 65px 0;
+    padding: 70px 0;
 }
 
 .title {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .title h1 {
     margin: 5px 0 10px;
 
-    font-size: 52px;
+    font-size: 55px;
 
     line-height: 1;
 
@@ -416,7 +393,7 @@ main {
 }
 
 .title p {
-    max-width: 750px;
+    max-width: 800px;
 
     margin: 0;
 
@@ -428,14 +405,14 @@ main {
 
 /* =====================================================
    CARTES
-   ===================================================== */
+===================================================== */
 
 .grid {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 18px;
 }
 
 .card {
@@ -443,7 +420,12 @@ main {
 
     padding: 25px;
 
-    background: var(--dark);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,25,15,.95),
+            rgba(4,10,6,.95)
+        );
 
     border: 1px solid var(--line);
 }
@@ -460,18 +442,23 @@ main {
     height: 2px;
 
     background: var(--green);
+
+    box-shadow:
+        0 0 10px rgba(67,255,131,.6);
 }
 
 .card h3 {
-    margin: 8px 0;
+    margin: 10px 0;
 
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .card p {
     margin: 0;
 
     color: var(--gray);
+
+    font-size: 16px;
 }
 
 .meta {
@@ -485,29 +472,26 @@ main {
 
 /* =====================================================
    PAGE AVEC SOMMAIRE
-   ===================================================== */
+===================================================== */
 
 .layout {
     display: grid;
 
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 230px 1fr;
 
-    gap: 30px;
+    gap: 35px;
+
+    align-items: start;
 }
-
-
-/* Sommaire */
 
 .toc {
     position: sticky;
 
-    top: 115px;
+    top: 120px;
 
-    height: max-content;
+    padding: 18px;
 
-    padding: 15px;
-
-    background: var(--dark);
+    background: rgba(5,13,8,.95);
 
     border: 1px solid var(--line);
 }
@@ -515,7 +499,7 @@ main {
 .toc strong {
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     color: var(--green);
 
@@ -527,7 +511,7 @@ main {
 .toc a {
     display: block;
 
-    padding: 9px;
+    padding: 10px;
 
     color: var(--gray);
 
@@ -541,28 +525,18 @@ main {
 
 /* =====================================================
    ARTICLES
-   ===================================================== */
+===================================================== */
 
 .article {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     border-bottom: 1px solid var(--line);
 }
 
-.article h2 {
-    margin: 5px 0 10px;
-
-    font-size: 32px;
-}
-
-.article p {
-    max-width: 850px;
-
-    color: #b8c8bc;
-
-    font-size: 17px;
+.article:last-child {
+    border-bottom: 0;
 }
 
 .article .tag {
@@ -575,13 +549,109 @@ main {
     letter-spacing: 2px;
 }
 
+.article h2 {
+    margin: 5px 0 12px;
 
-/* Citation */
+    font-size: 34px;
+}
+
+.article p {
+    max-width: 850px;
+
+    color: #b8c8bc;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   RÈGLEMENT
+===================================================== */
+
+.rules {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.rule {
+    display: flex;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(8,25,15,.95),
+            rgba(3,10,6,.95)
+        );
+
+    border: 1px solid var(--line);
+
+    border-left: 3px solid var(--green);
+}
+
+.rule-number {
+    width: 100px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+    background: rgba(67,255,131,.04);
+
+    border-right: 1px solid var(--line);
+
+    font-family: 'Share Tech Mono', monospace;
+
+    font-size: 22px;
+}
+
+.rule-content {
+    padding: 25px 30px;
+}
+
+.rule-content h2 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+
+    text-transform: uppercase;
+}
+
+.rule-content p {
+    margin: 0 0 10px;
+
+    color: var(--gray);
+
+    font-size: 16px;
+}
+
+.rule-content ul {
+    margin: 10px 0 0;
+
+    padding-left: 20px;
+
+    color: #77877d;
+}
+
+
+/* =====================================================
+   CITATION
+===================================================== */
 
 .quote {
-    padding: 15px 20px;
-
     margin: 20px 0;
+
+    padding: 16px 20px;
 
     color: #dcebe1;
 
@@ -592,15 +662,15 @@ main {
 
 
 /* =====================================================
-   TABLEAUX
-   ===================================================== */
+   TABLEAU
+===================================================== */
 
 .table {
     overflow-x: auto;
 
-    background: var(--dark);
-
     border: 1px solid var(--line);
+
+    background: var(--dark);
 }
 
 table {
@@ -636,32 +706,15 @@ td {
 
 
 /* =====================================================
-   NOTIFICATION
-   ===================================================== */
-
-.notice {
-    padding: 18px;
-
-    background: rgba(67,255,131,.06);
-
-    border: 1px solid var(--line);
-
-    color: var(--gray);
-}
-
-
-/* =====================================================
    FOOTER
-   ===================================================== */
+===================================================== */
 
 footer {
-    padding: 30px 0;
-
-    border-top: 1px solid var(--line);
-
-    color: #708478;
+    padding: 35px 0;
 
     background: #010302;
+
+    border-top: 1px solid var(--line);
 }
 
 .foot {
@@ -669,9 +722,11 @@ footer {
 
     justify-content: space-between;
 
-    gap: 15px;
+    gap: 20px;
 
     flex-wrap: wrap;
+
+    color: #708478;
 
     font-family: 'Share Tech Mono', monospace;
 
@@ -680,8 +735,8 @@ footer {
 
 
 /* =====================================================
-   RESPONSIVE
-   ===================================================== */
+   MOBILE
+===================================================== */
 
 @media (max-width: 850px) {
 
@@ -710,20 +765,20 @@ footer {
     }
 
     .hero {
-        min-height: 520px;
+        min-height: 540px;
     }
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
     .wrap {
-        width: calc(100% - 22px);
+        width: calc(100% - 24px);
     }
 
     .brand img {
-        width: 55px;
-        height: 55px;
+        width: 58px;
+        height: 58px;
     }
 
     .brand span {
@@ -750,17 +805,41 @@ footer {
     }
 
     .hero h2 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .title h1 {
         font-size: 40px;
     }
 
+    .rule {
+        flex-direction: column;
+    }
+
+    .rule-number {
+        width: 100%;
+
+        height: 45px;
+
+        justify-content: flex-start;
+
+        padding-left: 20px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .rule-content {
+        padding: 20px;
+    }
+
     .btn {
         width: 100%;
 
         margin: 5px 0 !important;
+
+        text-align: center;
     }
 
     .foot {
