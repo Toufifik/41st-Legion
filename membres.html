@@ -1,118 +1,879 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#020503">
-<title>Membres — 41st Légion d'Elite</title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header>
-  <div class="wrap header">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Logo 41st Légion d'Elite">
-      <span>41ST LÉGION D'ELITE<small>9ÈME CORPS D'ASSAUT</small></span>
-    </a>
-    
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="presentation.html">Présentation</a>
-  <a href="histoire.html">Histoire</a>
-  <a href="unites.html">Unités</a>
-  <a href="grades.html">Grades</a>
-  <a href="membres.html" class="active">Membres</a>
-  <a href="reglement.html">Règlement</a>
-  <a href="recrutement.html">Recrutement</a>
-</nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </div>
+    <title>Membres — 41st Légion d'Elite</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        /* =====================================================
+           PAGE MEMBRES
+           ===================================================== */
+
+        .members-page {
+            padding: 60px 0 80px;
+        }
+
+        .members-header {
+            margin-bottom: 40px;
+        }
+
+        .members-header h1 {
+            margin: 5px 0 10px;
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+
+        .members-header p {
+            max-width: 700px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* =====================================================
+           LISTE DES MEMBRES
+           ===================================================== */
+
+        .members-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        /* =====================================================
+           FICHE
+           ===================================================== */
+
+        .member-card {
+            position: relative;
+            min-width: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(7, 18, 11, .98),
+                    rgba(2, 7, 4, .98)
+                );
+
+            border: 1px solid rgba(67, 255, 131, .28);
+            border-top: 2px solid var(--green);
+
+            padding: 18px 15px;
+
+            transition: .25s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+
+            border-color: var(--green);
+
+            box-shadow:
+                0 0 25px rgba(67, 255, 131, .08);
+        }
+
+        /* petite ligne décorative */
+
+        .member-card::before {
+            content: "";
+            position: absolute;
+
+            top: 8px;
+            right: 8px;
+
+            width: 25px;
+            height: 25px;
+
+            border-top: 1px solid var(--green);
+            border-right: 1px solid var(--green);
+
+            opacity: .5;
+        }
+
+        /* =====================================================
+           EN-TÊTE DE LA FICHE
+           ===================================================== */
+
+        .member-number {
+            font-family: "Share Tech Mono", monospace;
+            font-size: 10px;
+
+            color: var(--green);
+
+            letter-spacing: .12em;
+
+            margin-bottom: 10px;
+        }
+
+        .member-card h2 {
+            margin: 0;
+
+            color: #fff;
+
+            font-size: 21px;
+
+            line-height: 1.05;
+
+            text-transform: uppercase;
+        }
+
+        .member-rank {
+            margin-top: 5px;
+
+            color: var(--green);
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .08em;
+        }
+
+        /* =====================================================
+           SÉPARATEUR
+           ===================================================== */
+
+        .member-line {
+            height: 1px;
+
+            margin: 15px 0;
+
+            background: rgba(67, 255, 131, .18);
+        }
+
+        /* =====================================================
+           INFORMATIONS
+           ===================================================== */
+
+        .member-info {
+            margin: 0;
+        }
+
+        .member-info-row {
+            margin-bottom: 11px;
+        }
+
+        .member-info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .member-label {
+            display: block;
+
+            margin-bottom: 2px;
+
+            color: #587062;
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .08em;
+        }
+
+        .member-value {
+            color: #dce9df;
+
+            font-size: 13px;
+
+            line-height: 1.3;
+        }
+
+        /* =====================================================
+           SPÉCIALITÉS
+           ===================================================== */
+
+        .member-specialities {
+            margin-top: 16px;
+        }
+
+        .member-specialities-title {
+            color: var(--green);
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .1em;
+
+            margin-bottom: 7px;
+        }
+
+        .member-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 4px;
+        }
+
+        .member-tag {
+            padding: 3px 6px;
+
+            border: 1px solid rgba(67, 255, 131, .18);
+
+            background: rgba(67, 255, 131, .035);
+
+            color: #91a99a;
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 8px;
+        }
+
+        /* =====================================================
+           ÉTAT
+           ===================================================== */
+
+        .member-status {
+            margin-top: 18px;
+
+            padding-top: 10px;
+
+            border-top: 1px solid rgba(67, 255, 131, .12);
+
+            color: var(--green);
+
+            font-family: "Share Tech Mono", monospace;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .08em;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .members-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 750px) {
+
+            .members-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .members-page {
+                padding: 40px 0 60px;
+            }
+
+            .members-header h1 {
+                font-size: 38px;
+            }
+
+            .members-list {
+                grid-template-columns: 1fr;
+            }
+
+            .member-card {
+                padding: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+
+    <div class="wrap header">
+
+        <a class="brand" href="index.html">
+
+            <img src="assets/logo.png" alt="Logo">
+
+            <span>
+                41ST LÉGION D'ELITE
+                <small>9ÈME CORPS D'ASSAUT</small>
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">Accueil</a>
+
+            <a href="presentation.html">Présentation</a>
+
+            <a href="histoire.html">Histoire</a>
+
+            <a href="unites.html">Unités</a>
+
+            <a href="grades.html">Grades</a>
+
+            <a class="active" href="membres.html">Membres</a>
+
+            <a href="reglement.html">Règlement</a>
+
+            <a href="recrutement.html">Recrutement</a>
+
+        </nav>
+
+    </div>
+
 </header>
 
+
+<!-- =====================================================
+     CONTENU
+     ===================================================== -->
+
 <main>
-<section class="section">
-<div class="wrap">
-  <div class="title">
-    <div class="kicker">Archives // Personnel</div>
-    <h1>Membres</h1>
-    <p>Une fiche simple par personnage. Pour ajouter un membre, duplique simplement un bloc <code>&lt;article class="character"&gt;</code>.</p>
-  </div>
 
-  <div class="member-list">
-    <article class="character">
-      <div class="character-image"><img src="assets/personnages/membre-01.png" alt="Personnage 01"></div>
-      <div class="character-sheet">
-        <div class="character-id">RC-41 // 001</div>
-        <h2>Nom du personnage</h2>
-        <div class="character-grade">COMMANDANT</div>
-        <div class="character-fields">
-          <div><b>UNITÉ</b><span>41ST LÉGION</span></div>
-          <div><b>SPÉCIALITÉ</b><span>COMMANDement</span></div>
-          <div><b>STATUT</b><span>ACTIF</span></div>
+    <section class="members-page">
+
+        <div class="wrap">
+
+
+            <!-- TITRE -->
+
+            <div class="members-header">
+
+                <div class="kicker">
+                    Registre militaire // 41ST
+                </div>
+
+                <h1>Membres</h1>
+
+                <p>
+                    Registre des membres de la 41st Légion d'Elite.
+                    Chaque fiche présente les informations principales
+                    du personnel du régiment.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 LISTE DES MEMBRES
+                 ================================================= -->
+
+            <div class="members-list">
+
+
+                <!-- ===============================
+                     MEMBRE 01
+                     =============================== -->
+
+                <article class="member-card">
+
+                    <div class="member-number">
+                        DOSSIER // 001
+                    </div>
+
+                    <h2>
+                        Nom du membre
+                    </h2>
+
+                    <div class="member-rank">
+                        Grade du membre
+                    </div>
+
+
+                    <div class="member-line"></div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Matricule
+                            </span>
+
+                            <span class="member-value">
+                                41ST-001
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Unité
+                            </span>
+
+                            <span class="member-value">
+                                41st Légion
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Fonction
+                            </span>
+
+                            <span class="member-value">
+                                Fonction du membre
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-specialities">
+
+                        <div class="member-specialities-title">
+                            Spécialités
+                        </div>
+
+                        <div class="member-tags">
+
+                            <span class="member-tag">
+                                Spécialité 01
+                            </span>
+
+                            <span class="member-tag">
+                                Spécialité 02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-status">
+                        Statut // Actif
+                    </div>
+
+                </article>
+
+
+                <!-- ===============================
+                     MEMBRE 02
+                     =============================== -->
+
+                <article class="member-card">
+
+                    <div class="member-number">
+                        DOSSIER // 002
+                    </div>
+
+                    <h2>
+                        Nom du membre
+                    </h2>
+
+                    <div class="member-rank">
+                        Grade du membre
+                    </div>
+
+
+                    <div class="member-line"></div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Matricule
+                            </span>
+
+                            <span class="member-value">
+                                41ST-002
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Unité
+                            </span>
+
+                            <span class="member-value">
+                                41st Légion
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Fonction
+                            </span>
+
+                            <span class="member-value">
+                                Fonction du membre
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-specialities">
+
+                        <div class="member-specialities-title">
+                            Spécialités
+                        </div>
+
+                        <div class="member-tags">
+
+                            <span class="member-tag">
+                                Spécialité 01
+                            </span>
+
+                            <span class="member-tag">
+                                Spécialité 02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-status">
+                        Statut // Actif
+                    </div>
+
+                </article>
+
+
+                <!-- ===============================
+                     MEMBRE 03
+                     =============================== -->
+
+                <article class="member-card">
+
+                    <div class="member-number">
+                        DOSSIER // 003
+                    </div>
+
+                    <h2>
+                        Nom du membre
+                    </h2>
+
+                    <div class="member-rank">
+                        Grade du membre
+                    </div>
+
+
+                    <div class="member-line"></div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Matricule
+                            </span>
+
+                            <span class="member-value">
+                                41ST-003
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Unité
+                            </span>
+
+                            <span class="member-value">
+                                41st Légion
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Fonction
+                            </span>
+
+                            <span class="member-value">
+                                Fonction du membre
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-specialities">
+
+                        <div class="member-specialities-title">
+                            Spécialités
+                        </div>
+
+                        <div class="member-tags">
+
+                            <span class="member-tag">
+                                Spécialité 01
+                            </span>
+
+                            <span class="member-tag">
+                                Spécialité 02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-status">
+                        Statut // Actif
+                    </div>
+
+                </article>
+
+
+                <!-- ===============================
+                     MEMBRE 04
+                     =============================== -->
+
+                <article class="member-card">
+
+                    <div class="member-number">
+                        DOSSIER // 004
+                    </div>
+
+                    <h2>
+                        Nom du membre
+                    </h2>
+
+                    <div class="member-rank">
+                        Grade du membre
+                    </div>
+
+
+                    <div class="member-line"></div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Matricule
+                            </span>
+
+                            <span class="member-value">
+                                41ST-004
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Unité
+                            </span>
+
+                            <span class="member-value">
+                                41st Légion
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Fonction
+                            </span>
+
+                            <span class="member-value">
+                                Fonction du membre
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-specialities">
+
+                        <div class="member-specialities-title">
+                            Spécialités
+                        </div>
+
+                        <div class="member-tags">
+
+                            <span class="member-tag">
+                                Spécialité 01
+                            </span>
+
+                            <span class="member-tag">
+                                Spécialité 02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-status">
+                        Statut // Actif
+                    </div>
+
+                </article>
+
+
+                <!-- ===============================
+                     MEMBRE 05
+                     =============================== -->
+
+                <article class="member-card">
+
+                    <div class="member-number">
+                        DOSSIER // 005
+                    </div>
+
+                    <h2>
+                        Nom du membre
+                    </h2>
+
+                    <div class="member-rank">
+                        Grade du membre
+                    </div>
+
+
+                    <div class="member-line"></div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Matricule
+                            </span>
+
+                            <span class="member-value">
+                                41ST-005
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Unité
+                            </span>
+
+                            <span class="member-value">
+                                41st Légion
+                            </span>
+
+                        </div>
+
+
+                        <div class="member-info-row">
+
+                            <span class="member-label">
+                                Fonction
+                            </span>
+
+                            <span class="member-value">
+                                Fonction du membre
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-specialities">
+
+                        <div class="member-specialities-title">
+                            Spécialités
+                        </div>
+
+                        <div class="member-tags">
+
+                            <span class="member-tag">
+                                Spécialité 01
+                            </span>
+
+                            <span class="member-tag">
+                                Spécialité 02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-status">
+                        Statut // Actif
+                    </div>
+
+                </article>
+
+
+            </div>
+
         </div>
-      </div>
-    </article>
 
-    <article class="character">
-      <div class="character-image"><img src="assets/personnages/membre-02.png" alt="Personnage 02"></div>
-      <div class="character-sheet">
-        <div class="character-id">RC-41 // 002</div>
-        <h2>Nom du personnage</h2>
-        <div class="character-grade">CAPITAINE</div>
-        <div class="character-fields">
-          <div><b>UNITÉ</b><span>41ST LÉGION</span></div>
-          <div><b>SPÉCIALITÉ</b><span>OFFICIER</span></div>
-          <div><b>STATUT</b><span>ACTIF</span></div>
-        </div>
-      </div>
-    </article>
+    </section>
 
-    <article class="character">
-      <div class="character-image"><img src="assets/personnages/membre-03.png" alt="Personnage 03"></div>
-      <div class="character-sheet">
-        <div class="character-id">RC-41 // 003</div>
-        <h2>Nom du personnage</h2>
-        <div class="character-grade">SERGENT</div>
-        <div class="character-fields">
-          <div><b>UNITÉ</b><span>41ST LÉGION</span></div>
-          <div><b>SPÉCIALITÉ</b><span>TERRAIN</span></div>
-          <div><b>STATUT</b><span>ACTIF</span></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="character">
-      <div class="character-image"><img src="assets/personnages/membre-04.png" alt="Personnage 04"></div>
-      <div class="character-sheet">
-        <div class="character-id">RC-41 // 004</div>
-        <h2>Nom du personnage</h2>
-        <div class="character-grade">CLONE TROOPER</div>
-        <div class="character-fields">
-          <div><b>UNITÉ</b><span>41ST LÉGION</span></div>
-          <div><b>SPÉCIALITÉ</b><span>ASSAUT</span></div>
-          <div><b>STATUT</b><span>ACTIF</span></div>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="armor-title">Portfolio // Armures</div>
-  <div class="armor-grid">
-    <article class="armor-card"><div class="armor-image"><img src="assets/personnages/armure-01.png" alt="Armure 01"></div><div class="armor-info"><span>ARMURE // 001</span><h3>Clone Trooper</h3><p>Équipement standard.</p></div></article>
-    <article class="armor-card"><div class="armor-image"><img src="assets/personnages/armure-02.png" alt="Armure 02"></div><div class="armor-info"><span>ARMURE // 002</span><h3>Spécialisée</h3><p>Configuration spéciale.</p></div></article>
-    <article class="armor-card"><div class="armor-image"><img src="assets/personnages/armure-03.png" alt="Armure 03"></div><div class="armor-info"><span>ARMURE // 003</span><h3>Éclaireur</h3><p>Reconnaissance.</p></div></article>
-    <article class="armor-card"><div class="armor-image"><img src="assets/personnages/armure-04.png" alt="Armure 04"></div><div class="armor-info"><span>ARMURE // 004</span><h3>Spécialiste</h3><p>Opérations spéciales.</p></div></article>
-    <article class="armor-card"><div class="armor-image"><img src="assets/personnages/armure-05.png" alt="Armure 05"></div><div class="armor-info"><span>ARMURE // 005</span><h3>Commandement</h3><p>Hiérarchie.</p></div></article>
-  </div>
-</div>
-</section>
 </main>
 
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
 <footer>
-  <div class="wrap foot">
-    <span>41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT</span>
-    <span>ARCHIVES // COMMUNAUTÉ</span>
-  </div>
+
+    <div class="wrap foot">
+
+        <span>
+            41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT
+        </span>
+
+        <span>
+            ARCHIVES // MEMBRES
+        </span>
+
+    </div>
+
 </footer>
+
+
 </body>
 </html>
