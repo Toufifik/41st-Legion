@@ -1,3 +1,135 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020503"><title>Règlement — 41st Légion d'Elite</title><link rel="stylesheet" href="assets/style.css"></head><body>
-<header><div class="wrap header"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Logo"><span>41ST LÉGION D'ELITE<small>9ÈME CORPS D'ASSAUT</small></span></a><nav><a class="" href="index.html">Accueil</a><a class="" href="presentation.html">Présentation</a><a class="" href="histoire.html">Histoire</a><a class="" href="unites.html">Unités</a><a class="" href="grades.html">Grades</a><a class="active" href="reglement.html">Règlement</a><a class="" href="recrutement.html">Recrutement</a></nav></div></header>
-<main><section class="section"><div class="wrap"><div class="title"><div class="kicker">Code de conduite</div><h1>Règlement</h1><p>Une page claire et structurée pour les règles de la communauté.</p></div><div class="grid"><article class="card"><span class="meta">01</span><h3>Respect</h3><p>Respecter chaque membre et préserver une bonne ambiance.</p></article><article class="card"><span class="meta">02</span><h3>Hiérarchie</h3><p>Respecter la chaîne de commandement lors des opérations.</p></article><article class="card"><span class="meta">03</span><h3>Roleplay</h3><p>Maintenir une attitude cohérente avec l'univers et les événements.</p></article><article class="card"><span class="meta">04</span><h3>Activité</h3><p>Participer à la vie de la légion et signaler ses absences.</p></article><article class="card"><span class="meta">05</span><h3>Fair-play</h3><p>Favoriser le collectif et le plaisir de jeu.</p></article><article class="card"><span class="meta">06</span><h3>Sanctions</h3><p>Les manquements sont traités par la hiérarchie selon leur gravité.</p></article></div></div></section></main><footer><div class="wrap foot"><span>41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT</span><span>ARCHIVES // COMMUNAUTÉ</span></div></footer></body></html>
+/* =========================================================
+   RÈGLEMENT — CATÉGORIES HORIZONTALES
+   ========================================================= */
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.rule {
+    display: flex;
+    width: 100%;
+    min-height: 150px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(8, 25, 15, 0.95),
+            rgba(3, 10, 6, 0.92)
+        );
+
+    border: 1px solid rgba(0, 255, 120, 0.16);
+    border-left: 3px solid rgba(0, 255, 120, 0.55);
+
+    transition: 0.25s ease;
+}
+
+.rule:hover {
+    transform: translateX(6px);
+
+    border-color: rgba(0, 255, 120, 0.4);
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 120, 0.06);
+}
+
+
+/* NUMÉRO */
+
+.rule-number {
+    width: 110px;
+    min-width: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00ff78;
+
+    background: rgba(0, 255, 120, 0.035);
+
+    border-right: 1px solid rgba(0, 255, 120, 0.12);
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+}
+
+
+/* CONTENU */
+
+.rule-content {
+    padding: 25px 30px;
+}
+
+.rule-content h2 {
+    margin-bottom: 8px;
+
+    color: white;
+
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rule-content p {
+    max-width: 900px;
+
+    margin-bottom: 12px;
+
+    color: #9daaa3;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.rule-content ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 25px;
+
+    padding-left: 18px;
+}
+
+.rule-content li {
+    color: #68766e;
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .rule {
+        flex-direction: column;
+    }
+
+    .rule-number {
+        width: 100%;
+        min-width: 0;
+        height: 50px;
+
+        justify-content: flex-start;
+
+        padding-left: 20px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 255, 120, 0.12);
+    }
+
+    .rule-content {
+        padding: 20px;
+    }
+
+    .rule-content h2 {
+        font-size: 24px;
+    }
+
+}
