@@ -39,25 +39,3 @@ main{min-height:60vh}.section{padding:58px 0}.title{margin-bottom:28px}.title .k
 footer{border-top:1px solid var(--line);padding:30px 0;color:#708478}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font:10px 'Share Tech Mono';letter-spacing:.06em}
 @media(max-width:850px){.header{height:auto;padding:11px 0;align-items:flex-start;flex-direction:column}nav{margin:0;justify-content:flex-start}.grid{grid-template-columns:1fr}.hero-cards{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.toc{position:static}.books{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.wrap{width:calc(100% - 22px)}.hero{position:relative;overflow:hidden;padding:58px 0 45px}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38;filter:saturate(.65) hue-rotate(65deg) contrast(1.1)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,5,3,.94),rgba(2,5,3,.62),rgba(2,5,3,.9)),linear-gradient(0deg,rgba(2,5,3,.95),transparent 50%);z-index:1}.hero-content{position:relative;z-index:2}.hero-logo{position:relative;z-index:2;width:110px;height:110px}.hero h1{font-size:44px}.title h1{font-size:42px}.books{grid-template-columns:1fr}nav a{font-size:9px;padding:8px 7px}}
-
-
-/* =========================================================
-   HEADER HEIGHT PATCH
-========================================================= */
-header .header,
-header .head {
-    min-height: 105px;
-}
-
-header .brand img {
-    width: 68px;
-    height: 68px;
-}
-
-@media (max-width: 900px) {
-    header .header,
-    header .head {
-        min-height: auto;
-        padding: 15px 0;
-    }
-}
