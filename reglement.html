@@ -4,12 +4,171 @@
 <head>
 
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Règlement — 41st Légion d'Elite</title>
 
     <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+
+        /* =====================================================
+           RÈGLEMENT — RECTANGLES
+        ===================================================== */
+
+        .rules {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            width: 82%;
+            margin: 40px auto;
+        }
+
+        .rule {
+            display: flex;
+            width: 100%;
+            min-height: 150px;
+
+            background: linear-gradient(
+                100deg,
+                rgba(8, 25, 15, 0.96),
+                rgba(3, 10, 6, 0.94)
+            );
+
+            border: 1px solid rgba(67, 255, 131, 0.20);
+            border-left: 3px solid #43ff83;
+
+            transition: 0.25s ease;
+        }
+
+        .rule:hover {
+            transform: translateX(5px);
+
+            border-color: rgba(67, 255, 131, 0.45);
+
+            box-shadow:
+                0 0 25px rgba(67, 255, 131, 0.08);
+        }
+
+
+        /* =====================================================
+           NUMÉRO
+        ===================================================== */
+
+        .rule-number {
+            width: 90px;
+            min-width: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #43ff83;
+
+            background: rgba(67, 255, 131, 0.04);
+
+            border-right: 1px solid rgba(67, 255, 131, 0.15);
+
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 22px;
+        }
+
+
+        /* =====================================================
+           CONTENU
+        ===================================================== */
+
+        .rule-content {
+            flex: 1;
+            padding: 25px 30px;
+        }
+
+        .rule-content h2 {
+            margin: 0 0 8px;
+
+            color: #edf8f0;
+
+            font-family: 'Rajdhani', sans-serif;
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .rule-content p {
+            margin: 0 0 12px;
+
+            max-width: 900px;
+
+            color: #9daaa3;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+        .rule-content ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px 25px;
+
+            margin: 10px 0 0;
+            padding-left: 18px;
+        }
+
+        .rule-content li {
+            color: #829189;
+
+            font-family: 'Share Tech Mono', monospace;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .rules {
+                width: 100%;
+            }
+
+            .rule {
+                flex-direction: column;
+            }
+
+            .rule-number {
+                width: 100%;
+                min-width: 0;
+
+                height: 50px;
+
+                justify-content: flex-start;
+
+                padding-left: 20px;
+
+                border-right: none;
+
+                border-bottom: 1px solid rgba(67, 255, 131, 0.15);
+            }
+
+            .rule-content {
+                padding: 20px;
+            }
+
+            .rule-content h2 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -17,7 +176,9 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -28,8 +189,13 @@
             <img src="assets/logo.png" alt="Logo">
 
             <span>
+
                 41ST LÉGION D'ELITE
-                <small>9ÈME CORPS D'ASSAUT</small>
+
+                <small>
+                    9ÈME CORPS D'ASSAUT
+                </small>
+
             </span>
 
         </a>
@@ -37,19 +203,33 @@
 
         <nav>
 
-            <a href="index.html">Accueil</a>
+            <a href="index.html">
+                Accueil
+            </a>
 
-            <a href="presentation.html">Présentation</a>
+            <a href="presentation.html">
+                Présentation
+            </a>
 
-            <a href="histoire.html">Histoire</a>
+            <a href="histoire.html">
+                Histoire
+            </a>
 
-            <a href="unites.html">Unités</a>
+            <a href="unites.html">
+                Unités
+            </a>
 
-            <a href="grades.html">Grades</a>
+            <a href="grades.html">
+                Grades
+            </a>
 
-            <a class="active" href="reglement.html">Règlement</a>
+            <a class="active" href="reglement.html">
+                Règlement
+            </a>
 
-            <a href="recrutement.html">Recrutement</a>
+            <a href="recrutement.html">
+                Recrutement
+            </a>
 
         </nav>
 
@@ -59,7 +239,9 @@
 
 
 
-<!-- ================= CONTENU ================= -->
+<!-- =====================================================
+     CONTENU
+===================================================== -->
 
 <main>
 
@@ -90,12 +272,14 @@
 
 
 
-            <!-- ================= RÈGLES ================= -->
+            <!-- =================================================
+                 CATÉGORIES
+            ================================================= -->
 
             <div class="rules">
 
 
-                <!-- RÈGLE 01 -->
+                <!-- ================= 01 ================= -->
 
                 <article class="rule">
 
@@ -116,11 +300,17 @@
 
                         <ul>
 
-                            <li>Respect du règlement</li>
+                            <li>
+                                Respect du règlement
+                            </li>
 
-                            <li>Respect des membres</li>
+                            <li>
+                                Respect des membres
+                            </li>
 
-                            <li>Respect des décisions prises</li>
+                            <li>
+                                Respect des décisions
+                            </li>
 
                         </ul>
 
@@ -130,7 +320,7 @@
 
 
 
-                <!-- RÈGLE 02 -->
+                <!-- ================= 02 ================= -->
 
                 <article class="rule">
 
@@ -151,11 +341,17 @@
 
                         <ul>
 
-                            <li>Aucune insulte</li>
+                            <li>
+                                Aucune insulte
+                            </li>
 
-                            <li>Aucune provocation</li>
+                            <li>
+                                Aucune provocation
+                            </li>
 
-                            <li>Respect de la communauté</li>
+                            <li>
+                                Respect de la communauté
+                            </li>
 
                         </ul>
 
@@ -165,7 +361,7 @@
 
 
 
-                <!-- RÈGLE 03 -->
+                <!-- ================= 03 ================= -->
 
                 <article class="rule">
 
@@ -186,11 +382,17 @@
 
                         <ul>
 
-                            <li>Respect des grades</li>
+                            <li>
+                                Respect des grades
+                            </li>
 
-                            <li>Respect des ordres</li>
+                            <li>
+                                Respect des ordres
+                            </li>
 
-                            <li>Respect de la chaîne de commandement</li>
+                            <li>
+                                Respect de la chaîne de commandement
+                            </li>
 
                         </ul>
 
@@ -200,7 +402,7 @@
 
 
 
-                <!-- RÈGLE 04 -->
+                <!-- ================= 04 ================= -->
 
                 <article class="rule">
 
@@ -211,7 +413,7 @@
                     <div class="rule-content">
 
                         <h2>
-                            Roleplay
+                            Jeu de rôle
                         </h2>
 
                         <p>
@@ -221,11 +423,17 @@
 
                         <ul>
 
-                            <li>Respect du contexte</li>
+                            <li>
+                                Respect du contexte
+                            </li>
 
-                            <li>Bonne immersion</li>
+                            <li>
+                                Bonne immersion
+                            </li>
 
-                            <li>Respect des autres joueurs</li>
+                            <li>
+                                Respect des autres joueurs
+                            </li>
 
                         </ul>
 
@@ -235,7 +443,7 @@
 
 
 
-                <!-- RÈGLE 05 -->
+                <!-- ================= 05 ================= -->
 
                 <article class="rule">
 
@@ -256,11 +464,17 @@
 
                         <ul>
 
-                            <li>Participer aux activités</li>
+                            <li>
+                                Participer aux activités
+                            </li>
 
-                            <li>Être présent lors des opérations</li>
+                            <li>
+                                Être présent lors des opérations
+                            </li>
 
-                            <li>Prévenir en cas d'absence</li>
+                            <li>
+                                Prévenir en cas d'absence
+                            </li>
 
                         </ul>
 
@@ -270,7 +484,7 @@
 
 
 
-                <!-- RÈGLE 06 -->
+                <!-- ================= 06 ================= -->
 
                 <article class="rule">
 
@@ -291,11 +505,17 @@
 
                         <ul>
 
-                            <li>Pas de troll</li>
+                            <li>
+                                Pas de troll
+                            </li>
 
-                            <li>Pas de comportement toxique</li>
+                            <li>
+                                Pas de comportement toxique
+                            </li>
 
-                            <li>Préserver l'image de la légion</li>
+                            <li>
+                                Préserver l'image de la légion
+                            </li>
 
                         </ul>
 
@@ -305,7 +525,7 @@
 
 
 
-                <!-- RÈGLE 07 -->
+                <!-- ================= 07 ================= -->
 
                 <article class="rule">
 
@@ -326,11 +546,17 @@
 
                         <ul>
 
-                            <li>Jouer en équipe</li>
+                            <li>
+                                Jouer en équipe
+                            </li>
 
-                            <li>Aider les autres membres</li>
+                            <li>
+                                Aider les autres membres
+                            </li>
 
-                            <li>Respecter les adversaires</li>
+                            <li>
+                                Respecter les adversaires
+                            </li>
 
                         </ul>
 
@@ -340,7 +566,7 @@
 
 
 
-                <!-- RÈGLE 08 -->
+                <!-- ================= 08 ================= -->
 
                 <article class="rule">
 
@@ -361,13 +587,21 @@
 
                         <ul>
 
-                            <li>Avertissement</li>
+                            <li>
+                                Avertissement
+                            </li>
 
-                            <li>Sanction disciplinaire</li>
+                            <li>
+                                Sanction disciplinaire
+                            </li>
 
-                            <li>Suspension</li>
+                            <li>
+                                Suspension
+                            </li>
 
-                            <li>Exclusion</li>
+                            <li>
+                                Exclusion
+                            </li>
 
                         </ul>
 
@@ -386,7 +620,9 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
