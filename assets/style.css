@@ -1415,3 +1415,360 @@ footer {
     }
 
 }
+
+/* =========================================================
+   MEMBRES
+========================================================= */
+
+.section-label {
+    margin: 45px 0 18px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--green);
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .18em;
+}
+
+.section-label span {
+    margin-right: 12px;
+    opacity: .6;
+}
+
+
+/* =========================
+   CARTES MEMBRES
+========================= */
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.member-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+
+    min-height: 270px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(7, 20, 12, .98),
+            rgba(3, 9, 6, .96)
+        );
+
+    border: 1px solid var(--line);
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .25s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 30px rgba(67,255,131,.08);
+}
+
+
+/* IMAGE PERSONNAGE */
+
+.member-preview {
+    position: relative;
+
+    min-height: 270px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center bottom,
+            rgba(67,255,131,.15),
+            transparent 60%
+        );
+
+    border-right: 1px solid var(--line2);
+
+    overflow: hidden;
+}
+
+.member-preview:after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 70%,
+            rgba(2,5,3,.8)
+        );
+
+    pointer-events: none;
+}
+
+.member-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 15px;
+
+    filter:
+        drop-shadow(0 0 15px rgba(67,255,131,.15));
+
+    transition: .3s ease;
+}
+
+.member-card:hover .member-preview img {
+    transform: scale(1.05);
+}
+
+
+/* INFOS */
+
+.member-info {
+    padding: 25px;
+}
+
+.member-number {
+    color: var(--green);
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+
+    letter-spacing: .15em;
+}
+
+.member-info h2 {
+    margin: 8px 0 2px;
+
+    color: white;
+
+    font-size: 28px;
+
+    text-transform: uppercase;
+}
+
+.member-grade {
+    color: var(--green);
+
+    font-family: 'Share Tech Mono', monospace;
+
+    font-size: 11px;
+
+    letter-spacing: .12em;
+}
+
+.member-info p {
+    margin: 18px 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+.member-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--line2);
+
+    padding-top: 14px;
+
+    gap: 15px;
+}
+
+.member-data span {
+    color: #a8b9ad;
+
+    font-family: 'Share Tech Mono', monospace;
+
+    font-size: 10px;
+}
+
+.member-data b {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--green);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   PORTFOLIO ARMURES
+========================================================= */
+
+.portfolio-title {
+    margin-top: 60px;
+}
+
+.armor-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.armor-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(6,17,10,.98),
+            rgba(2,7,4,.98)
+        );
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+
+    transition: .25s ease;
+}
+
+.armor-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 25px rgba(67,255,131,.08);
+}
+
+
+/* PREVIEW ARMURE */
+
+.armor-image {
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(67,255,131,.10),
+            transparent 65%
+        );
+}
+
+.armor-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 12px;
+
+    filter:
+        drop-shadow(0 0 12px rgba(67,255,131,.15));
+
+    transition: .3s ease;
+}
+
+.armor-card:hover .armor-image img {
+    transform: scale(1.06);
+}
+
+
+/* INFOS ARMURE */
+
+.armor-info {
+    padding: 12px;
+
+    border-top: 1px solid var(--line2);
+}
+
+.armor-info span {
+    color: var(--green);
+
+    font-family: 'Share Tech Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .12em;
+}
+
+.armor-info h3 {
+    margin: 5px 0;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.armor-info p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .armor-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .member-card {
+        grid-template-columns: 1fr;
+    }
+
+    .member-preview {
+        height: 280px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--line2);
+    }
+
+    .armor-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .armor-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
