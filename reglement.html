@@ -1,548 +1,341 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Règlement — 41st Légion d'Elite</title>
-
-    <link rel="stylesheet" href="assets/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#020503">
+<title>Règlement — 41st Légion d'Elite</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.reglement-hero{
+    position:relative;
+    padding:70px 0 45px;
+    border-bottom:1px solid var(--line-soft);
+    overflow:hidden;
+}
+.reglement-hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 80% 20%,rgba(67,255,131,.10),transparent 35%),
+      linear-gradient(90deg,rgba(67,255,131,.035) 1px,transparent 1px),
+      linear-gradient(rgba(67,255,131,.035) 1px,transparent 1px);
+    background-size:auto,45px 45px,45px 45px;
+    pointer-events:none;
+}
+.reglement-top{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:30px;
+}
+.reglement-code{
+    color:var(--green);
+    font-family:"Share Tech Mono",monospace;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+}
+.reglement-status{
+    border:1px solid var(--line);
+    padding:10px 14px;
+    color:var(--green);
+    background:rgba(67,255,131,.05);
+    font-family:"Share Tech Mono",monospace;
+    font-size:9px;
+    letter-spacing:.12em;
+}
+.reglement-layout{
+    display:grid;
+    grid-template-columns:240px minmax(0,1fr);
+    gap:35px;
+    padding:45px 0 80px;
+}
+.reglement-menu{
+    position:sticky;
+    top:125px;
+    height:max-content;
+    padding:18px;
+    background:rgba(5,15,8,.88);
+    border:1px solid var(--line);
+}
+.reglement-menu .menu-title{
+    color:var(--green);
+    font-family:"Share Tech Mono",monospace;
+    font-size:10px;
+    letter-spacing:.18em;
+    margin-bottom:12px;
+}
+.reglement-menu a{
+    display:block;
+    padding:11px 8px;
+    border-bottom:1px solid var(--line-soft);
+    color:var(--muted);
+    font-size:14px;
+    transition:.2s ease;
+}
+.reglement-menu a:hover{
+    color:var(--green);
+    padding-left:14px;
+}
+.reglement-content{
+    min-width:0;
+}
+.rule-section{
+    position:relative;
+    margin-bottom:24px;
+    padding:28px 30px;
+    background:linear-gradient(145deg,rgba(9,24,13,.94),rgba(3,9,5,.96));
+    border:1px solid var(--line);
+}
+.rule-section:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:70px;
+    height:3px;
+    background:var(--green);
+    box-shadow:0 0 15px var(--green);
+}
+.rule-number{
+    color:var(--green);
+    font-family:"Share Tech Mono",monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+}
+.rule-section h2{
+    margin:8px 0 16px;
+    font-size:30px;
+    text-transform:uppercase;
+}
+.rule-section p,
+.rule-section li{
+    color:#bdcec3;
+    font-size:17px;
+    line-height:1.7;
+}
+.rule-section ul{
+    margin:12px 0 0;
+    padding-left:22px;
+}
+.rule-section li{
+    margin:8px 0;
+}
+.rule-warning{
+    margin:0 0 28px;
+    padding:18px 20px;
+    border:1px solid rgba(67,255,131,.30);
+    border-left:3px solid var(--green);
+    background:rgba(67,255,131,.06);
+}
+.rule-warning strong{
+    display:block;
+    margin-bottom:6px;
+    color:var(--green);
+    font-family:"Share Tech Mono",monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+}
+.rule-table{
+    width:100%;
+    overflow-x:auto;
+    margin-top:20px;
+    border:1px solid var(--line);
+}
+.rule-table table{
+    min-width:560px;
+}
+.rule-footer{
+    margin-top:35px;
+    padding:22px;
+    border:1px dashed var(--line);
+    color:#8fa698;
+    font-family:"Share Tech Mono",monospace;
+    font-size:10px;
+    line-height:1.7;
+}
+@media(max-width:800px){
+    .reglement-top{align-items:flex-start;flex-direction:column;}
+    .reglement-layout{grid-template-columns:1fr;}
+    .reglement-menu{position:static;}
+}
+</style>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-    <div class="header">
-
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="41st Légion d'Elite">
-            <div>
-                <strong>41ST LÉGION D'ELITE</strong>
-                <span>9ÈME CORPS D'ASSAUT</span>
-            </div>
-        </a>
-
-        <nav>
-            <a href="index.html">ACCUEIL</a>
-            <a href="presentation.html">PRÉSENTATION</a>
-            <a href="histoire.html">HISTOIRE</a>
-            <a href="unites.html">UNITÉS</a>
-            <a href="grades.html">GRADES</a>
-            <a href="reglement.html" class="active">RÈGLEMENT</a>
-            <a href="recrutement.html">RECRUTEMENT</a>
-        </nav>
-
-    </div>
+<div class="wrap header">
+<a class="brand" href="index.html">
+<img src="assets/logo.png" alt="Logo 41st Légion">
+<span>41ST LÉGION D'ELITE<small>9ÈME CORPS D'ASSAUT</small></span>
+</a>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="presentation.html">Présentation</a>
+<a href="histoire.html">Histoire</a>
+<a href="unites.html">Unités</a>
+<a href="grades.html">Grades</a>
+<a class="active" href="reglement.html">Règlement</a>
+<a href="recrutement.html">Recrutement</a>
+</nav>
+</div>
 </header>
 
-
-<!-- ================= PAGE ================= -->
-
-<main class="page">
-
-    <section class="page-hero">
-
-        <div class="eyebrow">
-            ARCHIVES // DISCIPLINE // COMMUNAUTÉ
-        </div>
-
-        <h1>RÈGLEMENT</h1>
-
-        <p>
-            Directives officielles de la 41st Légion d'Elite
-            et du 9ème Corps d'Assaut.
-        </p>
-
-        <div class="status">
-            DOSSIER // REG-41 // ACTIF
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTENU ================= -->
-
-    <section class="content-grid">
-
-        <!-- SOMMAIRE -->
-
-        <aside class="toc">
-
-            <div class="toc-title">
-                INDEX DU DOSSIER
-            </div>
-
-            <a href="#general">
-                <span>01</span>
-                GÉNÉRAL
-            </a>
-
-            <a href="#respect">
-                <span>02</span>
-                RESPECT
-            </a>
-
-            <a href="#communaute">
-                <span>03</span>
-                COMMUNAUTÉ
-            </a>
-
-            <a href="#roleplay">
-                <span>04</span>
-                ROLEPLAY
-            </a>
-
-            <a href="#hierarchie">
-                <span>05</span>
-                HIÉRARCHIE
-            </a>
-
-            <a href="#activite">
-                <span>06</span>
-                ACTIVITÉ
-            </a>
-
-            <a href="#sanctions">
-                <span>07</span>
-                SANCTIONS
-            </a>
-
-        </aside>
-
-
-        <!-- ================= RÈGLEMENT ================= -->
-
-        <div class="rules">
-
-
-            <!-- GÉNÉRAL -->
-
-            <article class="rule-section" id="general">
-
-                <div class="section-number">
-                    01 // GÉNÉRAL
-                </div>
-
-                <h2>Règles générales</h2>
-
-                <p>
-                    Tout membre intégrant la 41st Légion d'Elite
-                    s'engage à respecter le présent règlement.
-                </p>
-
-                <div class="rule-card">
-
-                    <strong>01.01 — Engagement</strong>
-
-                    <p>
-                        Chaque membre représente la Légion lorsqu'il
-                        porte son nom, son grade ou son uniforme.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>01.02 — Comportement</strong>
-
-                    <p>
-                        Un comportement correct, mature et respectueux
-                        est exigé en toutes circonstances.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>01.03 — Consignes</strong>
-
-                    <p>
-                        Les ordres et consignes des supérieurs doivent
-                        être respectés dans le cadre des activités
-                        de la communauté.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- RESPECT -->
-
-            <article class="rule-section" id="respect">
-
-                <div class="section-number">
-                    02 // RESPECT
-                </div>
-
-                <h2>Respect des membres</h2>
-
-                <p>
-                    La cohésion du 9ème Corps d'Assaut repose sur
-                    le respect entre tous ses membres.
-                </p>
-
-                <div class="warning-box">
-
-                    <span class="warning-icon">!</span>
-
-                    <div>
-                        <strong>TOLÉRANCE ZÉRO</strong>
-
-                        <p>
-                            Les insultes, discriminations, provocations
-                            répétées ou comportements toxiques peuvent
-                            entraîner des sanctions.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>02.01 — Respect mutuel</strong>
-
-                    <p>
-                        Aucun membre ne doit rabaisser, harceler ou
-                        volontairement provoquer un autre membre.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>02.02 — Discussions</strong>
-
-                    <p>
-                        Les désaccords doivent être réglés calmement
-                        et, si nécessaire, avec l'intervention
-                        de la hiérarchie.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- COMMUNAUTÉ -->
-
-            <article class="rule-section" id="communaute">
-
-                <div class="section-number">
-                    03 // COMMUNAUTÉ
-                </div>
-
-                <h2>Vie communautaire</h2>
-
-                <p>
-                    Le serveur et les différents espaces communautaires
-                    doivent rester organisés et accessibles à tous.
-                </p>
-
-                <table class="rules-table">
-
-                    <thead>
-                        <tr>
-                            <th>Directive</th>
-                            <th>Application</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Spam</td>
-                            <td>Interdit</td>
-                        </tr>
-
-                        <tr>
-                            <td>Publicité</td>
-                            <td>Soumise à autorisation</td>
-                        </tr>
-
-                        <tr>
-                            <td>Contenu NSFW</td>
-                            <td>Interdit</td>
-                        </tr>
-
-                        <tr>
-                            <td>Provocation</td>
-                            <td>Interdite</td>
-                        </tr>
-
-                        <tr>
-                            <td>Usurpation</td>
-                            <td>Interdite</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </article>
-
-
-            <!-- ROLEPLAY -->
-
-            <article class="rule-section" id="roleplay">
-
-                <div class="section-number">
-                    04 // ROLEPLAY
-                </div>
-
-                <h2>Règles de roleplay</h2>
-
-                <p>
-                    Les activités RP doivent respecter l'univers,
-                    le contexte et les règles établies par
-                    la communauté.
-                </p>
-
-                <div class="rule-card">
-
-                    <strong>04.01 — Immersion</strong>
-
-                    <p>
-                        Les joueurs doivent privilégier l'immersion
-                        et éviter les comportements nuisant
-                        volontairement au RP.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>04.02 — Métagaming</strong>
-
-                    <p>
-                        L'utilisation d'informations obtenues
-                        hors personnage pour influencer une action
-                        RP est interdite.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>04.03 — Fair-play</strong>
-
-                    <p>
-                        Les scènes doivent rester cohérentes et
-                        respecter les autres participants.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- HIÉRARCHIE -->
-
-            <article class="rule-section" id="hierarchie">
-
-                <div class="section-number">
-                    05 // HIÉRARCHIE
-                </div>
-
-                <h2>Chaîne de commandement</h2>
-
-                <p>
-                    La hiérarchie permet d'assurer l'organisation
-                    et la coordination de la Légion.
-                </p>
-
-                <div class="hierarchy">
-
-                    <div class="hierarchy-item">
-                        <span>01</span>
-                        <div>
-                            <strong>HAUT COMMANDEMENT</strong>
-                            <small>Direction générale</small>
-                        </div>
-                    </div>
-
-                    <div class="hierarchy-item">
-                        <span>02</span>
-                        <div>
-                            <strong>OFFICIERS</strong>
-                            <small>Commandement des unités</small>
-                        </div>
-                    </div>
-
-                    <div class="hierarchy-item">
-                        <span>03</span>
-                        <div>
-                            <strong>SOUS-OFFICIERS</strong>
-                            <small>Encadrement du personnel</small>
-                        </div>
-                    </div>
-
-                    <div class="hierarchy-item">
-                        <span>04</span>
-                        <div>
-                            <strong>TROUPES</strong>
-                            <small>Personnel opérationnel</small>
-                        </div>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ACTIVITÉ -->
-
-            <article class="rule-section" id="activite">
-
-                <div class="section-number">
-                    06 // ACTIVITÉ
-                </div>
-
-                <h2>Activité et présence</h2>
-
-                <p>
-                    Une participation régulière à la vie de la Légion
-                    est recommandée afin de maintenir une organisation
-                    opérationnelle.
-                </p>
-
-                <div class="rule-card">
-
-                    <strong>06.01 — Absence</strong>
-
-                    <p>
-                        En cas d'absence prolongée, il est recommandé
-                        de prévenir un membre de la hiérarchie.
-                    </p>
-
-                </div>
-
-                <div class="rule-card">
-
-                    <strong>06.02 — Opérations</strong>
-
-                    <p>
-                        Lors des opérations, les membres doivent
-                        respecter les consignes données par
-                        le commandement.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- SANCTIONS -->
-
-            <article class="rule-section" id="sanctions">
-
-                <div class="section-number">
-                    07 // SANCTIONS
-                </div>
-
-                <h2>Discipline et sanctions</h2>
-
-                <p>
-                    Tout manquement au règlement peut faire l'objet
-                    d'une sanction proportionnée à la gravité
-                    des faits.
-                </p>
-
-                <div class="sanctions">
-
-                    <div class="sanction">
-                        <span>01</span>
-                        <div>
-                            <strong>AVERTISSEMENT</strong>
-                            <p>
-                                Rappel à l'ordre officiel.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sanction">
-                        <span>02</span>
-                        <div>
-                            <strong>AVERTISSEMENT MAJEUR</strong>
-                            <p>
-                                Sanction disciplinaire renforcée.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sanction">
-                        <span>03</span>
-                        <div>
-                            <strong>SUSPENSION</strong>
-                            <p>
-                                Retrait temporaire des activités
-                                communautaires.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sanction">
-                        <span>04</span>
-                        <div>
-                            <strong>EXCLUSION</strong>
-                            <p>
-                                Exclusion définitive de la communauté
-                                dans les cas les plus graves.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- NOTE -->
-
-            <div class="final-notice">
-
-                <div class="notice-title">
-                    DOSSIER // NOTE DU COMMANDEMENT
-                </div>
-
-                <p>
-                    Le présent règlement constitue une base de
-                    fonctionnement de la communauté. La hiérarchie
-                    se réserve le droit d'adapter les mesures
-                    disciplinaires selon la situation.
-                </p>
-
-                <span>
-                    41ST LÉGION D'ELITE // 9ÈME CORPS D'ASSAUT
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
+<main>
+
+<section class="reglement-hero">
+<div class="wrap reglement-top">
+<div>
+<div class="kicker">Archives // Discipline // Communauté</div>
+<h1 style="margin:10px 0 8px;font-size:clamp(44px,6vw,76px);text-transform:uppercase;line-height:.95;">Règlement</h1>
+<p style="margin:0;color:#a9bcaf;font-size:18px;">Code de conduite de la 41st Légion d'Elite.</p>
+</div>
+<div class="reglement-status">DOSSIER // REG-41 // ACTIF</div>
+</div>
+</section>
+
+<section class="wrap reglement-layout">
+
+<aside class="reglement-menu">
+<div class="menu-title">INDEX DU DOSSIER</div>
+<a href="#general">01 — Général</a>
+<a href="#respect">02 — Respect</a>
+<a href="#discord">03 — Communauté</a>
+<a href="#rp">04 — Roleplay</a>
+<a href="#hierarchie">05 — Hiérarchie</a>
+<a href="#activite">06 — Activité</a>
+<a href="#sanctions">07 — Sanctions</a>
+</aside>
+
+<div class="reglement-content">
+
+<div class="rule-warning">
+<strong>AVIS // À LIRE AVANT INTÉGRATION</strong>
+Ce règlement constitue une base de présentation pour le portail de la 41st Légion. Les règles exactes de votre règlement Google Docs peuvent être remplacées ici dès que son contenu est disponible.
+</div>
+
+<article class="rule-section" id="general">
+<div class="rule-number">ARTICLE 01 // PRINCIPES GÉNÉRAUX</div>
+<h2>Général</h2>
+<p>
+L'appartenance à la 41st Légion d'Elite implique le respect des règles de la communauté,
+de ses membres et de son organisation. Chaque membre est responsable de son comportement
+et doit contribuer à maintenir une ambiance saine, organisée et agréable.
+</p>
+<ul>
+<li>Respecter les règles de la communauté et les décisions de l'encadrement.</li>
+<li>Utiliser les espaces de discussion de manière appropriée.</li>
+<li>Éviter les comportements destinés à provoquer, harceler ou dégrader l'ambiance.</li>
+</ul>
+</article>
+
+<article class="rule-section" id="respect">
+<div class="rule-number">ARTICLE 02 // COMPORTEMENT</div>
+<h2>Respect & comportement</h2>
+<p>
+Le respect entre membres est une priorité. Les désaccords doivent être réglés calmement
+et, lorsque cela est nécessaire, transmis à un membre de l'encadrement.
+</p>
+<ul>
+<li>Aucune insulte ou harcèlement envers un membre.</li>
+<li>Respect des différences et des opinions de chacun.</li>
+<li>Pas de provocation volontaire ou de conflit recherché.</li>
+</ul>
+</article>
+
+<article class="rule-section" id="discord">
+<div class="rule-number">ARTICLE 03 // COMMUNAUTÉ</div>
+<h2>Discord & espaces communautaires</h2>
+<p>
+Les salons communautaires sont destinés à faciliter la communication, l'organisation
+et la vie de la légion. Chaque membre doit utiliser les salons correspondant à leur fonction.
+</p>
+<ul>
+<li>Respecter les règles et les indications des salons.</li>
+<li>Éviter le spam, le flood et les contenus inappropriés.</li>
+<li>Respecter les décisions de modération.</li>
+</ul>
+</article>
+
+<article class="rule-section" id="rp">
+<div class="rule-number">ARTICLE 04 // IMMERSION</div>
+<h2>Roleplay</h2>
+<p>
+Lors des activités RP, chaque participant doit favoriser l'immersion et le plaisir collectif.
+Les actions doivent rester cohérentes avec le cadre de la communauté et les règles de l'activité.
+</p>
+<ul>
+<li>Respecter le contexte et les consignes de l'événement.</li>
+<li>Éviter les comportements visant à casser volontairement l'immersion.</li>
+<li>Privilégier le jeu collectif plutôt que la recherche de performance individuelle.</li>
+</ul>
+</article>
+
+<article class="rule-section" id="hierarchie">
+<div class="rule-number">ARTICLE 05 // ORGANISATION</div>
+<h2>Hiérarchie</h2>
+<p>
+La chaîne de commandement permet d'organiser les opérations et de répartir les responsabilités.
+Les consignes de l'encadrement doivent être respectées pendant les activités de la légion.
+</p>
+<div class="rule-table">
+<table>
+<thead>
+<tr><th>PRINCIPE</th><th>APPLICATION</th></tr>
+</thead>
+<tbody>
+<tr><td>Communication</td><td>Privilégier des consignes claires et compréhensibles.</td></tr>
+<tr><td>Commandement</td><td>Respecter les responsables désignés lors d'une activité.</td></tr>
+<tr><td>Responsabilité</td><td>Signaler les problèmes à l'encadrement.</td></tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="rule-section" id="activite">
+<div class="rule-number">ARTICLE 06 // PARTICIPATION</div>
+<h2>Activité & absences</h2>
+<p>
+La participation régulière contribue au fonctionnement de la légion. En cas d'absence prolongée,
+il est recommandé de prévenir l'encadrement afin d'éviter toute incompréhension.
+</p>
+</article>
+
+<article class="rule-section" id="sanctions">
+<div class="rule-number">ARTICLE 07 // DISCIPLINE</div>
+<h2>Sanctions</h2>
+<p>
+Tout manquement au règlement peut faire l'objet d'une intervention de l'encadrement.
+La réponse dépend de la nature, de la gravité et de la répétition des faits.
+</p>
+<ul>
+<li>Rappel à l'ordre.</li>
+<li>Avertissement.</li>
+<li>Mesure disciplinaire adaptée à la situation.</li>
+<li>Exclusion de la communauté dans les cas les plus graves.</li>
+</ul>
+</article>
+
+<div class="rule-footer">
+ARCHIVE // 41ST LEGION D'ELITE<br>
+DOCUMENT : CODE DE CONDUITE<br>
+STATUT : VERSION WEB<br>
+NOTE : Remplacer les textes ci-dessus par le règlement officiel dès que son contenu est fourni.
+</div>
+
+</div>
+</section>
 
 </main>
 
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
-    <div>
-        41ST LÉGION D'ELITE
-    </div>
-
-    <span>
-        9ÈME CORPS D'ASSAUT
-    </span>
-
+<div class="wrap foot">
+<span>41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT</span>
+<span>ARCHIVES // COMMUNAUTÉ</span>
+</div>
 </footer>
 
 </body>
