@@ -1000,3 +1000,130 @@ footer {
         font-size: 24px;
     }
 }
+
+/* =========================================================
+   GRADES
+   ========================================================= */
+
+.grades {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+
+/* COLONNE */
+
+.grade-column {
+    border: 1px solid var(--line);
+    background: rgba(5, 13, 8, .85);
+}
+
+
+/* TITRE DE COLONNE */
+
+.grade-header {
+    padding: 18px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(67, 255, 131, .05);
+}
+
+.grade-header span {
+    display: block;
+    margin-bottom: 5px;
+
+    font: 10px 'Share Tech Mono';
+    color: var(--green);
+    letter-spacing: .15em;
+}
+
+.grade-header h2 {
+    margin: 0;
+
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+/* GRADE */
+
+.grade {
+    display: flex;
+    align-items: center;
+
+    min-height: 55px;
+
+    border-bottom: 1px solid var(--line2);
+}
+
+.grade:last-child {
+    border-bottom: none;
+}
+
+
+/* NUMÉRO */
+
+.grade-number {
+    width: 42px;
+    min-width: 42px;
+
+    text-align: center;
+
+    color: var(--green);
+
+    font: 10px 'Share Tech Mono';
+
+    opacity: .7;
+}
+
+
+/* NOM DU GRADE */
+
+.grade strong {
+    padding: 12px 8px;
+
+    color: #dce9df;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* SURVOL */
+
+.grade:hover {
+    background: rgba(67, 255, 131, .06);
+}
+
+.grade:hover strong {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .grades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .grades {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-header h2 {
+        font-size: 20px;
+    }
+
+}
