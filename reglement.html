@@ -1,101 +1,1016 @@
 <!doctype html>
 <html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#020503">
-<title>Règlement — 41st Légion d'Elite</title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header>
-  <div class="wrap header">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Logo 41st Légion d'Elite">
-      <span>41ST LÉGION D'ELITE<small>9ÈME CORPS D'ASSAUT</small></span>
-    </a>
-    
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="presentation.html">Présentation</a>
-  <a href="histoire.html">Histoire</a>
-  <a href="unites.html">Unités</a>
-  <a href="grades.html">Grades</a>
-  <a href="membres.html">Membres</a>
-  <a href="reglement.html" class="active">Règlement</a>
-  <a href="recrutement.html">Recrutement</a>
-</nav>
 
-  </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Règlement — 41st Légion d'Elite</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+
+        /* =====================================================
+           RÈGLEMENT
+        ===================================================== */
+
+        .reglement {
+            width: 82%;
+            margin: 40px auto;
+        }
+
+        .reglement-intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .reglement-intro h1 {
+            margin: 5px 0 10px;
+        }
+
+        .reglement-intro p {
+            color: #9daaa3;
+        }
+
+
+        /* =====================================================
+           CATÉGORIE
+        ===================================================== */
+
+        .reglement-section {
+            margin-bottom: 20px;
+
+            background: linear-gradient(
+                100deg,
+                rgba(8, 25, 15, .97),
+                rgba(3, 10, 6, .95)
+            );
+
+            border: 1px solid rgba(67, 255, 131, .20);
+
+            border-left: 3px solid #43ff83;
+
+            padding: 28px 35px;
+
+            transition: .25s ease;
+        }
+
+        .reglement-section:hover {
+            border-color: rgba(67, 255, 131, .45);
+
+            box-shadow:
+                0 0 25px rgba(67, 255, 131, .07);
+        }
+
+
+        /* TITRE */
+
+        .reglement-section h2 {
+            margin: 0 0 25px;
+
+            text-align: center;
+
+            color: #e7f4ea;
+
+            font-size: 25px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .reglement-section h2 span {
+            color: #43ff83;
+        }
+
+
+        /* SOUS-TITRE */
+
+        .reglement-subtitle {
+            margin: 25px 0 15px;
+
+            text-align: center;
+
+            color: #d6aa24;
+
+            font-size: 18px;
+
+            text-decoration: underline;
+        }
+
+
+        /* RÈGLE */
+
+        .regle {
+            margin: 0 0 18px;
+
+            color: #edf3ee;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+        }
+
+        .regle:last-child {
+            margin-bottom: 0;
+        }
+
+        .numero {
+            color: #d6aa24;
+
+            font-weight: 700;
+
+            text-decoration: underline;
+
+            margin-right: 5px;
+        }
+
+
+        /* LIGNE DE SÉPARATION */
+
+        .separation {
+            height: 1px;
+
+            background: rgba(67, 255, 131, .25);
+
+            margin: 25px auto;
+
+            width: 80%;
+        }
+
+
+        /* RÈGLE SPÉCIALE */
+
+        .special {
+            text-align: center;
+        }
+
+        .special-title {
+            color: #999;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            font-style: italic;
+
+            text-decoration: underline;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* SANCTIONS */
+
+        .sanctions {
+            color: #d6aa24;
+
+            font-style: italic;
+
+            font-weight: 600;
+
+            margin-top: 25px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .reglement {
+                width: 94%;
+            }
+
+            .reglement-section {
+                padding: 22px 20px;
+            }
+
+            .reglement-section h2 {
+                font-size: 21px;
+            }
+
+            .regle {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="wrap header">
+
+        <a class="brand" href="index.html">
+
+            <img src="assets/logo.png" alt="Logo">
+
+            <span>
+                41ST LÉGION D'ELITE
+                <small>9ÈME CORPS D'ASSAUT</small>
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">Accueil</a>
+
+            <a href="presentation.html">Présentation</a>
+
+            <a href="histoire.html">Histoire</a>
+
+            <a href="unites.html">Unités</a>
+
+            <a href="grades.html">Grades</a>
+
+            <a class="active" href="reglement.html">Règlement</a>
+
+            <a href="recrutement.html">Recrutement</a>
+
+        </nav>
+
+    </div>
+
 </header>
 
+
+
+<!-- =====================================================
+     RÈGLEMENT
+===================================================== -->
+
 <main>
-<section class="section">
-<div class="wrap">
-  <div class="title">
-    <div class="kicker">Code militaire // REG-41</div>
-    <h1>Règlement</h1>
-    <p>Règlement de la 41st Légion d'Elite. Les catégories sont volontairement horizontales et faciles à modifier.</p>
-  </div>
 
-  <div class="rules">
-    <article class="rule">
-  <div class="rule-number">1</div>
-  <div class="rule-content"><h2>1 — Constitution de la 41st</h2><p class="rule-line"><b>1.1</b> 2+2 = 5.</p><p class="rule-line"><b>1.2</b> Un 41st n'est jamais abandonné, on part et on rentre ensemble.</p><p class="rule-line"><b>1.3</b> Devant les autres régiments vous devez être sérieux, calme et ordonné. Toutefois, vous restez en droit de vous défendre de manière RP et correct.</p><p class="rule-line"><b>1.4</b> Pour accéder à une formation de spécialisation, vous devez obligatoirement être au grade de CPL et demander l'autorisation au CDM pour ensuite vous diriger vers le gérant de la spé.</p></div>
-</article><article class="rule">
-  <div class="rule-number">—</div>
-  <div class="rule-content"><h2>Les Supérieurs :</h2><p class="rule-line"><b>1.5</b> Vos supérieurs ont toujours raison.</p><p class="rule-line"><b>1.6</b> Quand un supérieur vous donne un ordre, vous devez le lui obéir (sauf contre-règles d'Or). L'insubordination peut valoir une rétrogradation ou une exclusion.</p><p class="rule-line"><b>1.7</b> Vos supérieurs ne sont pas vos amis, vous leur devez le respect en tout temps.</p><p class="rule-line"><b>1.8</b> Il est interdit de mentir à vos supérieurs, vos supérieurs peuvent décider arbitrairement si vous avez menti ou non.</p></div>
-</article><article class="rule">
-  <div class="rule-number">—</div>
-  <div class="rule-content"><h2>Les Sanctions :</h2><p class="rule-line"><b>1.9</b> Si vous recevez un protocole, vous recevrez automatiquement un blâme dans la 41st à partir du P4 ou du P3. Pour dénonciation calomnieuses, Ordonné un protocole sans raison valable et Perturbation du travail de la Shock Trooper.</p><p class="rule-line"><b>1.10</b> Vous vous devez d'être sérieux en tout temps. Les moments de détente ne doivent pas dégénérer au risque de se prendre un blâme. De plus, se mettre en CT ASP pour "troll" est sanctionnable.</p><p class="rule-line"><b>1.11</b> Il est proscrit d'insulter ou de rabaisser les autres régiments sous peine de blâme (voir même plus en fonction de la gravité des faits).</p><p class="rule-line"><b>1.12</b> Tout favoritisme repéré au sein de la 41st se verra sanctionné.</p></div>
-</article><article class="rule">
-  <div class="rule-number">—</div>
-  <div class="rule-content"><h2>Le Respect et La confiance :</h2><p class="rule-line"><b>1.13</b> Le respect est de mise entre nous. Les querelles dans la 41st peuvent advenir mais vous vous devez de les régler dans le respect de l'autre et de manière à ne pas impacter le régiment.</p><p class="rule-line"><b>1.14</b> Toute acte de violence morale visé et répétitif (HRP) envers un 41st sans raison bien spécifiée sera lourdement sanctionné.</p><p class="rule-line"><b>1.15</b> Si vous subissez un préjudice moral ou physique de la part d'un allié, faites-en part aux officiers ou supérieurs sur le moment présent.</p><p class="rule-line"><b>1.16</b> Lorsque vous subissez un préjudice moral ou physique, vous ne devez pas régler le problème seul ou par des actes "violents". Sinon vous insulte, ne le faites pas en retour.</p><p class="rule-line"><b>1.17</b> Vous devez en tout temps respecter vos frères d'armes, les civils, les agents d'entretien sur base, les droïdes ainsi que tout être sensible et non-hostile sous peine de blâme.</p><p class="rule-line"><b>1.18</b> Sur base vous devez prendre soin du matériel et de l'équipement mis à votre disposition, cela n'est pas gratuit.</p><p class="rule-line"><b>1.19</b> La confiance est la clé de la réussite, un 41st doit avoir pleinement confiance envers tous ses frères et avoir confiance en leurs compétences.</p></div>
-</article><article class="rule">
-  <div class="rule-number">—</div>
-  <div class="rule-content"><h2>Diplomatie et PHX :</h2><p class="rule-line"><b>1.20</b> Vous êtes des soldats ramenant la paix et non la guerre, votre parole est votre arme première.</p><p class="rule-line"><b>1.21</b> Soyez toujours prêt à aider vos prochains.</p><p class="rule-line"><b>1.22</b> Le pardon est la clé de la paix, l'amour propre est celui de la guerre.</p></div>
-</article><article class="rule">
-  <div class="rule-number">2</div>
-  <div class="rule-content"><h2>2 — Lors d'une Mission</h2><p class="rule-line"><b>2.1</b> En mission vous NE possédez PAS QUE DES ARMES Létales, usez de votre parole si possible.</p><p class="rule-line"><b>2.2</b> Vous êtes dans l'obligation de rejoindre le vocal discord, a minima pour écouter les ordres.</p><p class="rule-line"><b>2.3</b> Vous devez respecter les ordres du premier de mission (gérant de la 41st), qu'importe votre grade.</p><p class="rule-line"><b>2.4</b> En mission, tout canal de la 41st devient RP et il est obligatoire de le rejoindre. Seul le plus haut gradé de la 41st présent ainsi que son second sont autorisés à parler sur discord. Pour le reste, vous êtes dans l'obligation de parler en jeu si possible sauf pour infos importantes et demandes de médecin ou avec des pds, sous peine de blâme.</p><p class="rule-line"><b>2.5</b> Troller en vocal pendant une mission conduit systématiquement à une sanction.</p><p class="rule-line"><b>2.6</b> Lorsque vous participez à une mission, vous êtes dans l'obligation de participer aux Debriefing général et interne en rapport avec cette opération. Sauf si le commandement 41st vous autorise à y être absent.</p></div>
-</article><article class="rule">
-  <div class="rule-number">3</div>
-  <div class="rule-content"><h2>3 — Les Grades / Spécialisations</h2><p class="rule-line"><b>3.1</b> Il est interdit de demander des promotions ou des médailles, sous peine de ne pas les recevoir et de recevoir un blâme.</p><p class="rule-line"><b>3.2</b> La personne qui promeut se doit de notifier la promotion dans la section "[↑] promo-retro". Si vous avez été promu et que la personne a oublié de le notifier, vous pourrez le faire à sa place.</p><p class="rule-line"><b>3.3</b> Si vous avez été formé à une spécialisation il vous faut le signaler dans la section "[↑] promo-retro".</p><p class="rule-line"><b>3.4</b> A partir du grade de SGT-C, il vous faudra effectuer des missions en tant que Premier de mission et gérer l'ensemble de la 41st pour monter en grade.</p><p class="rule-line"><b>3.5</b> La réorganisation des troupes et grades peut passer par la rétrogradation.</p><p class="rule-line"><b>3.6</b> Lors d'un passage en réserve, la perte de spé est automatique.</p><p class="rule-line"><b>3.7</b> Si vous êtes exclu de la 41st un retour de droit n'est pas envisageable.</p><p class="rule-line"><b>3.8</b> Un Retour de Droit ne peut être fait les 6 mois maximum autorisé, le grade maximum lors d'un retour de droit est celui de LTN.</p></div>
-</article><article class="rule">
-  <div class="rule-number">4</div>
-  <div class="rule-content"><h2>4 — Gestion / Discord</h2><p class="rule-line"><b>4.1</b> Une fois la 41st rejointe et la radio discord accessible, vous êtes compté comme une personne ayant pris en compte l'intégralité du règlement ainsi que les informations importantes 24 Heures après.</p><p class="rule-line"><b>4.2</b> Vous êtes dans l'obligation de faire 1 rapport par semaine, sous peine de blâme à faire à partir de la section "[↑] rapport" et faire 5 lignes minimum. Si vous oubliez de faire votre rapport, un rappel vous sera fait et vous aurez 48H pour écrire votre rapport sur la semaine en question. Au-delà des 48h un blâme vous sera attribué. Au bout de 3 rappels consécutifs, le 4ème oubli résulte de l'attribution automatique d'un blâme. A partir du grade de Major en second, ceux-ci deviennent optionnels mais restent cependant fortement encouragés.</p><p class="rule-line"><b>4.3</b> Un blâme est valable un mois, chaque semaine les blâmes seront vérifiés et retirés en fonction du temps passé depuis leur attribution.</p><p class="rule-line"><b>4.4</b> Sur Discord, il faut différencier la radio RP de la radio HRP.</p><p class="rule-line"><b>4.5</b> Sur Discord, les acteurs d'un conflit vocal ou écrit se verront sanctionnées, hors cadre humoristique.</p><p class="rule-line"><b>4.6</b> Quand vous êtes présent au moins 1 heure sur base, il vous faut cocher la réaction "✓" dans la section "[↑] prise de service" avec un jeu correspondant.</p><p class="rule-line"><b>4.7</b> Toute personne étant réserviste ou en sortant seulement depuis 1 semaine ne peut agir ou effectuer quelconque choix envers la 41st pour X proposition.</p></div>
-</article><article class="rule">
-  <div class="rule-number">5</div>
-  <div class="rule-content"><h2>5 — Les absences / Réservistes</h2><p class="rule-line"><b>5.1</b> A partir de 5 jours d'absence, vous êtes dans l'obligation de signaler dans le salon des absences. Le cas échéant, vous recevrez un avertissement puis si cela se poursuit vous recevrez des blâmes.</p><p class="rule-line"><b>5.2</b> Après retour d'une absence vous serez bloqué de promotion durant 5 jours minimum.</p><p class="rule-line"><b>5.3</b> Les absences doivent être justifiées avec des raisons recevables si cela n'est pas respecté votre absence peut être refusée.</p><p class="rule-line"><b>5.4</b> Les absences à durée indéterminée sont interdites sauf pour cas spécifiques vue et accepté au préalable avec un membre du corps officier. Une absence peut aller de 5 jours à 2 mois maximum.</p><p class="rule-line"><b>5.5</b> Toute absence peut entraîner une perte de votre spécialité si cela est jugé nécessaire.</p><p class="rule-line"><b>5.6</b> 2 absences doivent être séparées de minimum 1 semaine.</p><p class="rule-line"><b>5.7</b> Au bout de 2 blâmes un CT se verra exclu du régiment.</p><p class="rule-line"><b>5.8</b> Pour passer en réserviste il faut avoir le grade de Caporal (CPL) minimum.</p><p class="rule-line"><b>5.9</b> Si une personne au-dessus du grade de LTN passe en réserviste il se verra rétrogradé au rang de LTN et donc chaque passage sur base fera reset en Lieutenant.</p><p class="rule-line"><b>5.10</b> Une sortie des Réservistes peut entraîner une perte de Grade. Le grade maximum de sortie des Réserviste est le grade de Lieutenant.</p><p class="rule-line"><b>5.11</b> Deux passages en réservistes doivent être séparés de minimum 3 mois.</p><p class="rule-line"><b>5.12</b> Un passage en réserviste entraîne une perte de tout pouvoir décisionnaire sur l'avenir du régiment jusqu'à sortie des réservistes (le vote n'est pas comptabilisable).</p></div>
-</article><article class="rule">
-  <div class="rule-number">6</div>
-  <div class="rule-content"><h2>6 — Formation / Recrutement / Entraînement</h2><p class="rule-line"><b>6.1</b> Pour former un CT ASP en tant que 41st il vous faudra atteindre le rang de SGT et être formé par un officier minimum sauf autorisation d'un officier à être formé par un membre du Régiment.</p><p class="rule-line"><b>6.2</b> Les véhicules 41st ne peuvent être conduit que par grades étant supérieur ou égal à CT Confirmé après une formation effectuée par un officier de la 41st. Il est obligatoire de passer cette formation avant de passer CPL.</p><p class="rule-line"><b>6.3</b> Seuls les officiers dones du régiment sont autorisés à réaliser des entraînements officiels sans autorisation du CMOM. Les autres membres du régiment souhaitant réaliser doivent passer par la procédure décrite par le document nommé "PROCEDURE D'ORGANISATION DES ENTRAINEMENTS".</p><p class="rule-line"><b>6.4</b> Lors d'un recrutement vous devez envoyer le rapport de recrutement dans "[↑] rapport-de-recrutement" : si le CT asp a été reçu dans le régiment vous devez aussi le signaler dans "[↑] promo-retro". Si le CT ASP n'a pas pu finir sa formation vous devrez aussi reporter dans le même rapport de formation avec ce qui a été fait ou non.</p><p class="rule-line"><b>6.5</b> Si une formation n'a pas pu être terminée pour X raison, vous devrez reprendre à partir des points qui n'ont pas été traités et évalués. Si le recrutement d'un CT ASP n'est pas terminé dans un délai de 3 jours vous devrez recommencer à 0 son recrutement.</p><p class="rule-line"><b>6.6</b> Lors d'un recrutement pour un CT ASP vous devrez l'accompagner tout du long jusqu'à la demande de grade et ensuite lui expliquer les channels discord.</p><p class="rule-line"><b>6.7</b> Lors d'un recrutement, il vous est demandé d'être sérieux et stricte. Montrez que notre régiment n'est pas un centre de loisir.</p><p class="rule-line"><b>6.8</b> Lors d'entraînement vous devrez utiliser vos armes fournies par le régiment (armes de job).</p></div>
-</article><article class="rule">
-  <div class="rule-number">7</div>
-  <div class="rule-content"><h2>7 — Les quartiers</h2><p class="rule-line"><b>7.1</b> Les quartiers ne sont pas un lieu pour jouer. Ils doivent être propres, rangés et vous ne devez en aucun cas vous permettre d'y faire n'importe quoi (sanction en cas de débordement).</p><p class="rule-line"><b>7.2</b> Dans les quartiers les moments de détente sont acceptés (HRP vocal seulement) mais si une personne souhaite du sérieux vous devrez vous y plier.</p><p class="rule-line"><b>7.3</b> Les quartiers de la 41st doivent toujours avoir un bar au sein de celui-ci (tradition).</p><p class="rule-line"><b>7.4</b> Les quartiers de la 41st sont une zone où vous pouvez rester inactif sans problème, évitez de stationner n'importe où dans la base en étant AFK.</p></div>
-</article><article class="rule">
-  <div class="rule-number">8</div>
-  <div class="rule-content"><h2>8 — Les Jedi</h2><p class="rule-line"><b>8.1</b> Les Commandants Jedi Confirmé 1 ont la possibilité de promouvoir un 41st seulement avec l'autorisation d'un officier.</p><p class="rule-line"><b>8.2</b> Les généraux de la 41st peuvent promouvoir sans autorisation, des clones jusqu'au grade OAGD-C. Au dessus une concertation avec minimum 2 officiers est nécessaire en respectant les prérequis de Promotions 1.</p><p class="rule-line"><b>8.3</b> Les Jedi non confirmés ne peuvent en aucun cas intervenir dans la gestion et l'administratif au sein de la 41st.</p></div>
-</article>
-  </div>
+<div class="reglement">
 
-  <div class="notice" style="margin-top:24px">
-    <strong>Règle spéciale</strong><br>
-    Règle 49-3 : Le CMOM 1004 est dans la possibilité de faire passer toute action illicite envers la 41st sans concertation avec le corps officiers ou autre organisme interne à la 41.
-  </div>
 
-  <div class="notice" style="margin-top:16px">
-    <strong>Sanctions</strong><br>
-    Le non-respect du règlement entraînera une sanction selon l'acte commis : 1 blâme = aucune conséquence ou sanction à déterminer ; 2 blâmes = rétrogradation ; 3 blâmes = exclusion ; voir un protocole ou une exclusion blacklist selon la gravité de l'acte.
-  </div>
+    <!-- INTRODUCTION -->
+
+    <div class="reglement-intro">
+
+        <div class="kicker">
+            CODE MILITAIRE // REG-41
+        </div>
+
+        <h1>
+            RÈGLEMENT
+        </h1>
+
+        <p>
+            Celui-ci s'applique à tout le monde, Jedi Alpha ou
+            Clone de la 41st sauf EM.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         1. CONSTITUTION
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>1.</span> Constitution de la 41st
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">1.1</span>
+            2+2 = 5.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.2</span>
+            Un 41st n'est jamais abandonné, on part et on rentre ensemble.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.3</span>
+            Devant les autres régiments vous devez être sérieux, calme et ordonné.
+            Toutefois, vous restez en droit de vous détendre de manière RP et correcte.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.4</span>
+            Pour accéder à une formation de spécialisation, vous devez obligatoirement
+            être au grade de CPL et demander l'autorisation au CMDM pour ensuite vous
+            diriger vers le gérant de la spé.
+        </p>
+
+
+        <div class="reglement-subtitle">
+            Les Supérieurs :
+        </div>
+
+
+        <p class="regle">
+            <span class="numero">1.5</span>
+            Vos supérieurs ont toujours raison.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.6</span>
+            Quand un supérieur vous donne un ordre, vous vous devez de lui obéir
+            (sauf contre règles d'or). L'insubordination peut valoir une rétrogradation
+            ou une exclusion.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.7</span>
+            Vos supérieurs ne sont pas vos amis, vous leur devez le respect en tout temps.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.8</span>
+            Il est interdit de mentir à vos supérieurs, vos supérieurs peuvent décider
+            arbitrairement si vous avez menti ou non.
+        </p>
+
+
+        <div class="reglement-subtitle">
+            Les Sanctions :
+        </div>
+
+
+        <p class="regle">
+            <span class="numero">1.9</span>
+            Si vous recevez un protocole, vous recevrez automatiquement un blâme
+            dans la 41st à partir d'un P4 ou d'un P5 pour : dénonciation calomnieuse,
+            ordonner un protocole sans raison valable et perturbation du travail
+            de la Shock Trooper.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.10</span>
+            Vous vous devez d'être sérieux en tout temps. Les moments de détente
+            ne doivent pas dégénérer au risque de se prendre un blâme. De plus,
+            se mettre en CT ASP pour « troll » est sanctionnable.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.11</span>
+            Il est proscrit d'insulter ou de rabaisser les autres régiments sous
+            peine de blâme (voir même plus en fonction de la gravité des faits).
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.12</span>
+            Tout favoritisme repéré au sein de la 41st se verra sanctionné.
+        </p>
+
+
+        <div class="reglement-subtitle">
+            Le Respect et La confiance :
+        </div>
+
+
+        <p class="regle">
+            <span class="numero">1.13</span>
+            Le respect est de mise entre nous. Les querelles dans la 41st peuvent
+            advenir mais vous vous devez de les régler dans le respect de l'autre
+            et de manière à ne pas impacter le régiment.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.14</span>
+            Tout acte de violence morale visé et répétitif (HRP) envers un 41st
+            sans raison bien spécifique sera lourdement sanctionné.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.15</span>
+            Si vous subissez un préjudice moral ou physique de la part d'un allié,
+            faites-en part aux officiers ou supérieurs sur le moment présent.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.16</span>
+            Lorsque vous subissez un préjudice moral ou physique, vous ne devez pas
+            régler le problème seul ou par des actes « violents ». Si on vous insulte,
+            ne le faites pas en retour.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.17</span>
+            Vous devez en tout temps respecter vos frères d'armes, les civils,
+            les agents d'entretien sur base, les droïdes ainsi que tout être sensible
+            et non-hostile sous peine de blâme.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.18</span>
+            Sur base vous devez prendre soin du matériel et de l'équipement mis
+            à votre disposition, cela n'est pas gratuit.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.19</span>
+            La confiance est la clé de la réussite, un 41st doit avoir pleinement
+            confiance envers tous ses frères et avoir confiance en leurs compétences.
+        </p>
+
+
+        <div class="reglement-subtitle">
+            Diplomatie et PAX :
+        </div>
+
+
+        <p class="regle">
+            <span class="numero">1.20</span>
+            Vous êtes des soldats ramenant la paix et non la guerre, votre parole
+            est votre arme première.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.21</span>
+            Soyez toujours prêt à aider vos prochains.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">1.22</span>
+            Le pardon est la clé de la paix, l'amour propre est celui de la guerre.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         2. MISSION
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>2.</span> Lors d'une Mission
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">2.1</span>
+            En mission vous NE possédez PAS QUE DES ARMES Létales,
+            usez de votre parole si possible.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">2.2</span>
+            Vous êtes dans l'obligation de rejoindre le vocal Discord,
+            à minima pour écouter les ordres.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">2.3</span>
+            Vous devez respecter les ordres du premier de mission
+            (gérant de la 41st), qu'importe votre grade.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">2.4</span>
+            En mission, tout canal de la 41st devient RP et il est obligatoire
+            de le rejoindre. Seul le plus haut gradé de la 41st présent ainsi
+            que son second sont autorisés à parler sur Discord. Pour le reste,
+            vous êtes dans l'obligation de parler en jeu (si possible sauf pour
+            infos importantes et demandes de médecin) ou avec des PUP,
+            sous peine de blâme.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">2.5</span>
+            Troller en vocal pendant une mission conduit systématiquement
+            à une sanction.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">2.6</span>
+            Lorsque vous participez à une mission, vous êtes dans l'obligation
+            de participer aux Debriefing général et interne en rapport avec cette
+            opération. Sauf si le Commandement 41st vous autorise à y être absent.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         3. GRADES
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>3.</span> Les Grades / Spécialisations
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">3.1</span>
+            Il est interdit de demander des promotions ou des médailles,
+            sous peine de ne pas les recevoir et de recevoir un blâme.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.2</span>
+            La personne qui promeut se doit de notifier la promotion dans
+            la section « [1] promo-retro ». Si vous avez été promu et que la
+            personne a oublié de le notifier, vous pourrez le faire à sa place.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.3</span>
+            Si vous avez été formé à une spécialisation il vous faut le signaler
+            dans la section « [1] promo-retro ».
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.4</span>
+            A partir du grade de SGT-C, il vous faudra effectuer des missions
+            en tant que premier de mission et gérer l'ensemble de la 41st
+            pour monter en grade.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.5</span>
+            La réorganisation des troupes et grades peut passer par la rétrogradation.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.6</span>
+            Lors d'un passage en réserviste, la perte de spé est automatique.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.7</span>
+            Si vous êtes exclu de la 41st un retour de droit n'est pas envisageable.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">3.8</span>
+            Un Retour de Droit tous les 6 mois maximum est autorisé,
+            le grade maximum lors d'un retour de droit est celui de LTN.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         4. GESTION / DISCORD
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>4.</span> Gestion / Discord
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">4.1</span>
+            Une fois la 41st rejointe et la radio Discord accessible,
+            vous êtes compté comme une personne ayant pris en compte
+            l'intégralité du règlement ainsi que les informations importantes
+            24 heures après.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">4.2</span>
+            Vous êtes dans l'obligation de faire 1 rapport par semaine,
+            sous peine de blâme (à faire à partir de la section
+            « [1] rapport » et faire 5 lignes minimum).
+        </p>
+
+
+        <p class="regle">
+            Si vous oubliez de faire votre rapport, un rappel vous sera fait
+            et vous aurez 48H pour écrire votre rapport sur la semaine en question.
+            Au-delà des 48H un blâme vous sera attribué. Au bout de 3 rappels
+            consécutifs, le 4ème oubli résulte de l'attribution automatique d'un blâme.
+        </p>
+
+
+        <p class="regle">
+            À partir du grade de Capitaine en second, ceux-ci deviennent optionnels
+            mais restent cependant fortement encouragés.
+        </p>
+
+
+        <p class="regle">
+            Un blâme est valable un mois, chaque semaine les blâmes seront vérifiés
+            et retirés en fonction du temps passé depuis leur attribution.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">4.4</span>
+            Sur Discord, il faut différencier la radio RP de la radio HRP.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">4.5</span>
+            Sur Discord, les acteurs d'un conflit vocal ou écrit se verront
+            sanctionnés, hors cadre humoristique.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">4.6</span>
+            Quand vous êtes présent au moins 1 heure sur base, il vous faut
+            cocher la réaction « ✓ » dans la section « [1] prise de service »
+            au jour correspondant.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">4.7</span>
+            Toute personne étant réserviste ou en sortant seulement depuis
+            1 semaine ne peut agir ou effectuer quelconque choix envers
+            la 41st pour X proposition.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         5. ABSENCES / RÉSERVISTES
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>5.</span> Les absences / Réservistes
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">5.1</span>
+            À partir de 5 jours d'absence, vous êtes dans l'obligation de le
+            signaler dans le salon des absences. Le cas échéant, vous recevrez
+            un avertissement puis si cela se poursuit vous recevrez des blâmes.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.2</span>
+            Après retour d'une absence vous serez bloqué de promotion durant
+            5 jours minimum.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.3</span>
+            Les absences doivent être justifiées avec des raisons recevables
+            si cela n'est pas respecté votre absence peut être refusée.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.4</span>
+            Les absences à durée indéterminée sont interdites sauf pour cas
+            spécifiques vue et accepté au préalable avec un membre du corps officier.
+            Une absence peut aller de 5 jours à 2 mois maximum.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.5</span>
+            Toute absence peut entraîner une perte de votre spécialité si cela
+            est jugé nécessaire.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.6</span>
+            2 absences doivent être séparées de minimum 1 semaine.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.7</span>
+            Au bout de 2 blâmes un CT se verra exclu du régiment.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.8</span>
+            Pour passer en réserviste il faut avoir le grade de Caporal (CPL) minimum.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.9</span>
+            Si une personne au-dessus du grade de LTN passe en réserviste,
+            il se verra rétrogradé au rang de LTN et donc chaque passage sur
+            base se fera en Lieutenant.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.10</span>
+            Une sortie des Réservistes peut entraîner une perte de Grade.
+            Le Grade maximum de sortie des Réserviste est le grade de Lieutenant.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.11</span>
+            Deux passages en réservistes doivent être séparés de minimum 3 mois.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">5.12</span>
+            Un passage en réserviste entraîne une perte de tout pouvoir décisionnaire
+            sur l'avenir du régiment jusqu'à sortie des réservistes
+            (le vote n'est pas comptabilisé).
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         6. FORMATION / RECRUTEMENT
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>6.</span> Formation / Recrutement / Entraînement
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">6.1</span>
+            Pour former un CT ASP en tant que 41st il vous faudra atteindre
+            le rang de SGT et être formé par un officier minimum sauf autorisation
+            d'un officier à être formé par un membre du Régiment.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.2</span>
+            Les véhicules 41st ne peuvent être conduit que par les grades étant
+            supérieur ou égal à CT Confirmé après une formation effectuée par
+            un officier de la 41st. Il est obligatoire de passer cette formation
+            avant de passer CPL.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.3</span>
+            Seuls les officiers clones du régiment sont autorisés à réaliser
+            des entraînements officiels sans autorisation du CMOM.
+            Les autres membres du régiment souhaitant en réaliser doivent passer
+            par la procédure décrite par le document nommé
+            « PROCEDURE D'ORGANISATION DES ENTRAINEMENTS ».
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.4</span>
+            Lors d'un recrutement vous devez envoyer le rapport de recrutement
+            dans « [1] rapport-de-recrutement ». Si le CT ASP a été reçu dans
+            le régiment vous devez aussi le signaler dans la section
+            « [1] promo-retro ». Si le CT ASP n'a pas pu finir sa formation
+            vous enverrez tout de même le rapport de formation avec ce qui
+            a été fait ou non.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.5</span>
+            Si une formation n'a pas pu être terminée pour X raison,
+            vous devrez reprendre à partir des points qui n'ont pas été
+            traités et évalués. Si le recrutement d'un CT ASP n'est pas
+            terminé dans un délai de 3 jours vous devrez recommencer à 0
+            son recrutement.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.6</span>
+            Lors d'un recrutement pour un CT ASP vous devrez l'accompagner
+            tout du long jusqu'à la demande de grade et ensuite lui expliquer
+            les channels Discord.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.7</span>
+            Lors d'un recrutement, il vous est demandé d'être sérieux et strict.
+            Montrez que notre régiment n'est pas un centre de loisir.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">6.8</span>
+            Lors d'entraînement vous devrez utiliser vos armes fournies par
+            le régiment (armes de job 1).
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         7. QUARTIERS
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>7.</span> Les quartiers
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">7.1</span>
+            Les quartiers ne sont pas un lieu pour jouer. Ils doivent être propres,
+            rangés et vous ne devez en aucun cas vous permettre d'y faire n'importe
+            quoi (sanction en cas de débordement).
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">7.2</span>
+            Dans les quartiers les moments de détente sont acceptés
+            (HRP vocal seulement) mais si une personne souhaite du sérieux
+            vous devrez vous y plier.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">7.3</span>
+            Les quartiers de la 41st doivent toujours avoir un bar au sein
+            de celui-ci (tradition).
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">7.4</span>
+            Les quartiers de la 41st sont une zone où vous pouvez rester
+            inactif sans problème, évitez de stationner n'importe où dans
+            la base en étant AFK.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         8. JEDI
+    ================================================= -->
+
+    <section class="reglement-section">
+
+        <h2>
+            <span>8.</span> Les Jedi
+        </h2>
+
+
+        <p class="regle">
+            <span class="numero">8.1</span>
+            Les Commandants Jedi Confirmé 1 ont la possibilité de promouvoir
+            un 41st seulement avec l'autorisation d'un officier.
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">8.2</span>
+            Les généraux de la 41st peuvent promouvoir sans autorisation,
+            des clones jusqu'au grade de CADI-C. Au dessus une concertation
+            avec minimum 2 officiers est nécessaire (en respectant les
+            prérequis de promotions).
+        </p>
+
+
+        <p class="regle">
+            <span class="numero">8.3</span>
+            Les Jedi non confirmés ne peuvent en aucun cas intervenir
+            dans la gestion et l'administratif au sein de la 41st.
+        </p>
+
+
+        <div class="separation"></div>
+
+
+        <div class="special-title">
+            Règle Spéciale
+        </div>
+
+
+        <p class="regle special">
+            Règle 49-3 : Le CMOM 1824 est dans la possibilité de faire
+            passer toute action licite envers la 41st sans concertation
+            avec le Corps officiers ou autre organisme interne à la 41.
+        </p>
+
+
+        <div class="separation"></div>
+
+
+        <div class="sanctions">
+
+            Le non-respect du règlement entraînera une sanction
+            selon l'acte commis.
+
+            <br><br>
+
+            1 blâme = Aucune conséquence ou sanction à déterminer
+
+            <br>
+
+            2 blâmes = rétrogradation
+
+            <br>
+
+            3 blâmes = exclusion
+
+            <br><br>
+
+            Voir un protocole ou une exclusion / blacklist selon
+            la gravité de l'acte.
+
+        </div>
+
+    </section>
+
+
 </div>
-</section>
+
 </main>
 
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
-  <div class="wrap foot">
-    <span>41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT</span>
-    <span>ARCHIVES // COMMUNAUTÉ</span>
-  </div>
+
+    <div class="wrap foot">
+
+        <span>
+            41ST LÉGION D'ELITE · 9ÈME CORPS D'ASSAUT
+        </span>
+
+        <span>
+            ARCHIVES // COMMUNAUTÉ
+        </span>
+
+    </div>
+
 </footer>
+
+
 </body>
 </html>
